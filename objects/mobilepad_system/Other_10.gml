@@ -1,0 +1,22 @@
+var _mk_direction_x, _mk_direction_y, _mk_direction_angle, _mk_direction_angle_right, _mk_direction_angle_up, _mk_direction_angle_left, _mk_direction_angle_down;
+
+_mksystem = true;
+_mk_direction_x = device_mouse_x_to_gui(user) - 140;
+_mk_direction_y = device_mouse_y_to_gui(user) - 360;
+_mk_direction_angle = point_direction(0, 0, _mk_direction_x, _mk_direction_y);
+_mk_direction_angle_right = _mk_direction_angle >= 292.5 || _mk_direction_angle <= 67.5;
+_mk_direction_angle_up = _mk_direction_angle >= 22.5 && _mk_direction_angle <= 157.5;
+_mk_direction_angle_left = _mk_direction_angle >= 112.5 && _mk_direction_angle <= 247.5;
+_mk_direction_angle_down = _mk_direction_angle >= 202.5 && _mk_direction_angle <= 337.5;
+_mkright = _mk_direction_angle_right ? false : true;
+_mkpad_check = _mk_direction_angle_right ? ((_mkpad_check == 0) ? 39 : 0) : 0;
+_mkpad_pressed = _mk_direction_angle_right ? ((_mkpad_check != 0) ? 39 : 0) : 0;
+_mkup = _mk_direction_angle_up ? false : true;
+_mkpad_check = _mk_direction_angle_up ? ((_mkpad_check == 0) ? 38 : 0) : 0;
+_mkpad_pressed = _mk_direction_angle_up ? ((_mkpad_check != 0) ? 38 : 0) : 0;
+_mkleft = _mk_direction_angle_left ? false : true;
+_mkpad_check = _mk_direction_angle_left ? ((_mkpad_check == 0) ? 37 : 0) : 0;
+_mkpad_pressed = _mk_direction_angle_left ? ((_mkpad_check != 0) ? 37 : 0) : 0;
+_mkdown = _mk_direction_angle_down ? false : true;
+_mkpad_check = _mk_direction_angle_down ? ((_mkpad_check == 0) ? 40 : 0) : 0;
+_mkpad_pressed = _mk_direction_angle_down ? ((_mkpad_check != 0) ? 40 : 0) : 0;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ClearBoneWalls",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ClearBoneWalls",
+  "parent":{
+    "name":"Optimization",
+    "path":"folders/Scripts/Optimization.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_slash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_slash",
+  "parent":{
+    "name":"Bullet",
+    "path":"folders/Scripts/Battle/Bullet.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

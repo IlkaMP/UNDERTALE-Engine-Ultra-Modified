@@ -1,0 +1,28 @@
+if dialogue == true{
+if flag = false{
+	flag = true
+    a = Battle_SetDialogEnemy(battle_enemy.xdialogue,battle_enemy.ydialogue, 0, 0);
+    a.text = dialoguetext
+}
+if !instance_exists(a){
+	start=1
+	battle_soul.moveable = 1
+	Battle_SetTurnTime(-1)
+}
+} else{
+	start=1
+	battle_soul.moveable = 1
+	Battle_SetTurnTime(-1)
+}
+if start{
+if t == 50{
+	Battle_MakeSlash(bx, by, DIR.UP-45, 0)
+	paps = Battle_MakeBone(bx, by, 65, 0, 0, 2, 0, 0, 10, 0, 0, 0, 0)
+	paps.paps = 1
+	paps.point = 1
+	Battle_MakeGB(0, 0, bx - 200, by, 0, DIR.RIGHT, 2, 2, 0)
+}
+if t == 250{
+	Battle_EndTurn()
+}
+}

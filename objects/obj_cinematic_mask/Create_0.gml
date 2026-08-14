@@ -1,0 +1,14 @@
+depth = -401;
+h = 60;
+show = true;
+th = 4;
+col = 16777215;
+ang = 0;
+mask_alpha = 1;
+border_alpha = 1;
+mask_col = 0;
+border_grad_mode = true;
+b_col_al = 255;
+b_col_ar = 16711680;
+b_col_bl = 65535;
+b_col_br = 32768;

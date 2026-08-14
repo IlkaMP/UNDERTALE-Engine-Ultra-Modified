@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BoneStabs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BoneStabs",
+  "parent":{
+    "name":"Bone",
+    "path":"folders/Scripts/Battle/Bone.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

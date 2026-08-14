@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CreateBone",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateBone",
+  "parent":{
+    "name":"Bone",
+    "path":"folders/Scripts/Battle/Bone.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

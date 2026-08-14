@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SlamUp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SlamUp",
+  "parent":{
+    "name":"Soul",
+    "path":"folders/Scripts/Battle/Soul.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

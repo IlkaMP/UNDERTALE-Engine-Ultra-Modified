@@ -1,0 +1,12 @@
+_mksystem = false;
+_mkx = true;
+_mkz = true;
+_mkhide = true;
+_mkrestart = true;
+_mkf2 = true
+_mkup = true;
+_mkdown = true;
+_mkleft = true;
+_mkright = true;
+_mkpad_check = 0;
+_mkpad_pressed = 0;
