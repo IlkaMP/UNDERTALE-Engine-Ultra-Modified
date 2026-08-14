@@ -15,7 +15,11 @@ if !instance_exists(a){
 	Battle_SetTurnTime(-1)
 }
 if start{
+	if t = 1{
+		Fader_Fade(0, 1, 50, 0, c_red)
+	}
 if t == 50{
+	Fader_Fade(1, 0, 10, 0, c_red)
 	Battle_MakeSlash(bx, by, DIR.UP-45, 0)
 	paps = Battle_MakeBone(bx, by, 65, 0, 0, 2, 0, 0, 10, 0, 0, 0, 0)
 	paps.paps = 1

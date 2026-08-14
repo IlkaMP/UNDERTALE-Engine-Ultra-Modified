@@ -7,6 +7,8 @@ function Fader_Fade() {
 	var TARGET=argument[1];
 	var TIME=argument[2];
 	var DELAY=0;
+	var _COLOR=argument[4]
+	fader.color = _COLOR
 	if(argument_count>=4){
 		DELAY=argument[3];
 	}
