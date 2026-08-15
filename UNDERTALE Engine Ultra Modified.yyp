@@ -199,6 +199,7 @@
     {"id":{"name":"battle_menu_fight","path":"objects/battle_menu_fight/battle_menu_fight.yy",},},
     {"id":{"name":"battle_menu_item_dot","path":"objects/battle_menu_item_dot/battle_menu_item_dot.yy",},},
     {"id":{"name":"battle_menu_item_scrollbar","path":"objects/battle_menu_item_scrollbar/battle_menu_item_scrollbar.yy",},},
+    {"id":{"name":"battle_menu_item_ui","path":"objects/battle_menu_item_ui/battle_menu_item_ui.yy",},},
     {"id":{"name":"battle_obj_warn","path":"objects/battle_obj_warn/battle_obj_warn.yy",},},
     {"id":{"name":"battle_platform","path":"objects/battle_platform/battle_platform.yy",},},
     {"id":{"name":"battle_result_flee","path":"objects/battle_result_flee/battle_result_flee.yy",},},

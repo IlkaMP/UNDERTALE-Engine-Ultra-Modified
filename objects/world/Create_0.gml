@@ -12,8 +12,6 @@ global.clearbonewalls = []
 global.deaths = 0
 //if true, you'll can control with gamepad\/
 global.gamepad_controls = false
-//shaking on souls slams and other...\/
-global.shaking = false
 //if true, centers origin of buttons\/
 global.buttons_centered = true
 //will blue/orange attack react on keyboard or soul moves?\/

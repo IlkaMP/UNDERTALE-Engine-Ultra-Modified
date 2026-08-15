@@ -1,6 +1,6 @@
 ///@desc Init
 //enemy name\/
-Battle_SetEnemyName(_enemy_slot, "* Poseur")
+Battle_SetEnemyName(_enemy_slot, "* Sans")
 //enemy defense\/
 Battle_SetEnemyDEF(_enemy_slot,-15);
 //spareable of enemy\/

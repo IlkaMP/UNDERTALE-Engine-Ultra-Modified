@@ -35,7 +35,11 @@ function Player_CustomInitialData(){
     global.papsbones = false
     //set false to disable blur
     global.blur = true
-    //change this params here or in the world object, if in world delete this vars from here
+	//shaking on souls slams and other...\/
+	global.shaking = false
+	//if true item system will be just like in undertale
+	global.vanilla_items = false
+    //classic ui from undertale or new?\/
     global.classic_ui = false
     global.classic_ui_spr = false
     //Set var to 0 to disable kr

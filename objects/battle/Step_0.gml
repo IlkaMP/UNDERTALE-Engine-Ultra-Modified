@@ -255,7 +255,7 @@ if (!global.classic_ui) {
         } else
 
         //物品
-        if (_menu == BATTLE_MENU.ITEM) {
+        if (_menu == BATTLE_MENU.ITEM and instance_exists(battle_menu_item_scrollbar)) {
             //上/下
             with(text_typer) {
                 _surface_target = Battle_GetBoardSurface();
@@ -538,7 +538,7 @@ if (!global.classic_ui) {
         } else
 
         //物品
-        if (_menu == BATTLE_MENU.ITEM) {
+        if (_menu == BATTLE_MENU.ITEM and instance_exists(battle_menu_item_scrollbar)) {
             //上/下
             if (Input_IsPressed(INPUT.UP)) {
                 var slot = Battle_GetMenuChoiceItem() - 1;

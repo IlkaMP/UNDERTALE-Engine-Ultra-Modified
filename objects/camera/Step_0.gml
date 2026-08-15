@@ -150,7 +150,7 @@ else
 
 if (!instance_exists(target))
 {
-    camera_set_view_target(_camera, 90);
+    camera_set_view_target(_camera, noone);
     camera_set_view_pos(_camera, ((x + 320) - ((width / scale_x) * 0.5)) + _shake_pos_x, ((y + 240) - ((height / scale_y) * 0.5)) + _shake_pos_y);
 }
 else

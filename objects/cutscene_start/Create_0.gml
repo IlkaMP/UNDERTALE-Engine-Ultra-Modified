@@ -61,9 +61,9 @@ function Cutscene_EndScene(){
 	instance_destroy(self)
 	instance_create_depth(0,0,0,turn_after)
 }
-event_user(0)
 typer=undefined
 typer1=undefined
 typer2=undefined
 typer3=undefined
 cin=undefined
+event_user(0)

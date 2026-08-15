@@ -92,6 +92,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"fnt_PIxelMario","order":3,"path":"fonts/fnt_PIxelMario/fnt_PIxelMario.yy",},
+    {"name":"font_crypt_of_tomorrow","order":4,"path":"fonts/font_crypt_of_tomorrow/font_crypt_of_tomorrow.yy",},
     {"name":"font_papyrus","order":1,"path":"fonts/font_papyrus/font_papyrus.yy",},
     {"name":"font_sans_rus","order":2,"path":"fonts/font_sans_rus/font_sans_rus.yy",},
     {"name":"battle_bg","order":9,"path":"objects/battle_bg/battle_bg.yy",},
@@ -111,6 +112,7 @@
     {"name":"battle_menu_fight_anim_glove_mini","order":1,"path":"objects/battle_menu_fight_anim_glove_mini/battle_menu_fight_anim_glove_mini.yy",},
     {"name":"battle_menu_fight_anim_glove_z","order":2,"path":"objects/battle_menu_fight_anim_glove_z/battle_menu_fight_anim_glove_z.yy",},
     {"name":"battle_menu_fight_toughglove","order":2,"path":"objects/battle_menu_fight_toughglove/battle_menu_fight_toughglove.yy",},
+    {"name":"battle_menu_item_ui","order":1,"path":"objects/battle_menu_item_ui/battle_menu_item_ui.yy",},
     {"name":"battle_obj_warn","order":6,"path":"objects/battle_obj_warn/battle_obj_warn.yy",},
     {"name":"battle_result_flee","order":1,"path":"objects/battle_result_flee/battle_result_flee.yy",},
     {"name":"battle_slash","order":8,"path":"objects/battle_slash/battle_slash.yy",},
