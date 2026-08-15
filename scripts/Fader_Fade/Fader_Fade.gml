@@ -2,6 +2,7 @@
 ///@arg target
 ///@arg time
 ///@arg delay*
+///@arg color*
 function Fader_Fade() {
 	var START=argument[0];
 	var TARGET=argument[1];

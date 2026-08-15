@@ -3,17 +3,17 @@ camera.shake_x = 5
 camera.shake_y = 5
 }
 if t == 280{
-	typer = TextTyper_Add(200, 20, -999, "{speed 7}{voice 4}{color `red`}{skippable 0}I can fuckin' swear...")
+	typer = TextTyper_Add(200, 20, -999, "{speed 7}{font 3}{voice 4}{color `red`}{skippable 0}I can fuckin' swear...")
 }
 
 if t == 470{
-	typer1 = TextTyper_Add(250, 50, -999, "{speed 7}{voice 4}{color `red`}{skippable 0}You have a plan to kill all&of us..")
+	typer1 = TextTyper_Add(250, 50, -999, "{speed 7}{font 3}{voice 4}{color `red`}{skippable 0}You have a plan to &kill all of us..")
 }
 if t == 750{
-	typer2 = TextTyper_Add(200, 100, -999, "{speed 7}{voice 4}{color `red`}{skippable 0}I'm haven't a plan..")
+	typer2 = TextTyper_Add(200, 100, -999, "{speed 7}{font 3}{voice 4}{color `red`}{skippable 0}I'm haven't a plan..")
 }
 if t == 970{
-	typer3 = TextTyper_Add(210, 130, -999, "{speed 7}{voice 4}{color `red`}{skippable 0}BUT IT WILL NOT DELAY YOUR DIE!!!")
+	typer3 = TextTyper_Add(210, 130, -999, "{speed 7}{font 3}{voice 4}{color `red`}{skippable 0}BUT IT WILL NOT&DELAY YOUR DIE!!!")
 }
 if t == 1250{
 	if typer != undefined

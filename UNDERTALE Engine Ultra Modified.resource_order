@@ -93,7 +93,8 @@
   "ResourceOrderSettings":[
     {"name":"fnt_PIxelMario","order":3,"path":"fonts/fnt_PIxelMario/fnt_PIxelMario.yy",},
     {"name":"font_crypt_of_tomorrow","order":4,"path":"fonts/font_crypt_of_tomorrow/font_crypt_of_tomorrow.yy",},
-    {"name":"font_papyrus","order":1,"path":"fonts/font_papyrus/font_papyrus.yy",},
+    {"name":"font_determination_sans","order":5,"path":"fonts/font_determination_sans/font_determination_sans.yy",},
+    {"name":"font_papyrus","order":6,"path":"fonts/font_papyrus/font_papyrus.yy",},
     {"name":"font_sans_rus","order":2,"path":"fonts/font_sans_rus/font_sans_rus.yy",},
     {"name":"battle_bg","order":9,"path":"objects/battle_bg/battle_bg.yy",},
     {"name":"battle_bullet_bone_3d","order":5,"path":"objects/battle_bullet_bone_3d/battle_bullet_bone_3d.yy",},
