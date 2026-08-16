@@ -470,6 +470,7 @@
     {"name":"spr_black","order":7,"path":"sprites/spr_black/spr_black.yy",},
     {"name":"spr_bone_paps_1","order":3,"path":"sprites/spr_bone_paps_1/spr_bone_paps_1.yy",},
     {"name":"spr_bone_paps","order":2,"path":"sprites/spr_bone_paps/spr_bone_paps.yy",},
+    {"name":"spr_bone_sharp_paps","order":5,"path":"sprites/spr_bone_sharp_paps/spr_bone_sharp_paps.yy",},
     {"name":"spr_bone_sharp","order":4,"path":"sprites/spr_bone_sharp/spr_bone_sharp.yy",},
     {"name":"spr_bone","order":1,"path":"sprites/spr_bone/spr_bone.yy",},
     {"name":"spr_button_scale","order":8,"path":"sprites/spr_button_scale/spr_button_scale.yy",},

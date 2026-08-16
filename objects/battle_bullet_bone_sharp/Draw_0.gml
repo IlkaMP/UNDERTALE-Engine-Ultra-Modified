@@ -1,17 +1,9 @@
 // Inherit the parent event
-event_inherited();
-
-dmg = 1
-outline = false
-type = 0
-paps = 0
-
 if paps{
 	sprite_index = spr_bone_sharp_paps
 }
 if global.papsbones{
 	sprite_index = spr_bone_sharp_paps
 }
-if outline{
-	image_index = 1
-}
+event_inherited();
+

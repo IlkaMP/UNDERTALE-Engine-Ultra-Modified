@@ -748,6 +748,7 @@
     {"id":{"name":"spr_bone_1","path":"sprites/spr_bone_1/spr_bone_1.yy",},},
     {"id":{"name":"spr_bone_paps_1","path":"sprites/spr_bone_paps_1/spr_bone_paps_1.yy",},},
     {"id":{"name":"spr_bone_paps","path":"sprites/spr_bone_paps/spr_bone_paps.yy",},},
+    {"id":{"name":"spr_bone_sharp_paps","path":"sprites/spr_bone_sharp_paps/spr_bone_sharp_paps.yy",},},
     {"id":{"name":"spr_bone_sharp","path":"sprites/spr_bone_sharp/spr_bone_sharp.yy",},},
     {"id":{"name":"spr_bone","path":"sprites/spr_bone/spr_bone.yy",},},
     {"id":{"name":"spr_border_simple","path":"sprites/spr_border_simple/spr_border_simple.yy",},},

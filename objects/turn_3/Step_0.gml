@@ -39,7 +39,7 @@ if start and dend{
 		SlamDown()
 	}
 	if t > 50 and t % 40 == 0{
-		b2 = Battle_MakeBoneSharp(bx, by - 120, 0, 0, point_direction(bx, by - 120, bsx, bsy), 2, 0)
+		b2 = Battle_MakeBoneSharp(bx, by - 120, 0, 0, 0, 0, point_direction(bx, by - 120, bsx, bsy), 2, 0)
 	}
 	if t > 50{
 		battle_board.angle += 2
