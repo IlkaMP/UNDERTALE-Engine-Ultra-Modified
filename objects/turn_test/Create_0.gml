@@ -6,3 +6,7 @@ dialogue = true
 dialoguetext = "testdialogue"
 flag = false
 endturntext = "* ..."
+if dialogue{
+	battle_soul.moveable = 0
+}
+CC_Add(object_get_name(object_index))

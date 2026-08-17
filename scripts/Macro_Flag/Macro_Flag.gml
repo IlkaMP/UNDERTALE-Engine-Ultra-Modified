@@ -1,3 +1,4 @@
+function Macro_Flag() {
 #region static
 #macro FLAG_STATIC_NAME "name"
 #macro FLAG_STATIC_LV "lv"
@@ -53,3 +54,13 @@
 #macro FLAG_TEMP_SHOP_ROOM_RETURN "shop_room_return"
 #macro FLAG_TEMP_SHOP "shop"
 #endregion
+
+#region type
+	enum TYPE {
+		WHITE,
+		BLUE,
+		ORANGE,
+		GREEN
+	}
+#endregion
+}

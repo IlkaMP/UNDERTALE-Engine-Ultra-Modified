@@ -12,3 +12,4 @@ dialoguetext = "{skippable 0}{font 0}{voice 0}Here is moving&when i talkin'.&And
 flag = false
 onetime = false
 endturntext = "* Ahem, four!"
+CC_Add(object_get_name(object_index))

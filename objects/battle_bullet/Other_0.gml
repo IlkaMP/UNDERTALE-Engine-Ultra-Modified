@@ -1,3 +1,2 @@
-if(auto_destroy = 1){
-	instance_destroy();
-}
+if(auto_destroy)
+	alarm[0] = 60

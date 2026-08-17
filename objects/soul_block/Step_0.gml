@@ -38,7 +38,7 @@ if (battle_soul.moveable) {
 
     var bulletInstance = noone;
     for (var i = 0; i < instance_count; i++) {
-        bulletInstance = instance_find(battle_bullet_arrow, i);
+        bulletInstance = instance_find(battle_bullet_arrow_1, i);
         if (bulletInstance && bulletInstance.type == 0) {
             bulletInstance.image_index = 1;
             break;

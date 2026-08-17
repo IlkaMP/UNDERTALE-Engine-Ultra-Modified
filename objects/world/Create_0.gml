@@ -12,6 +12,8 @@ global.clearbonewalls = []
 global.deaths = 0
 //if true, you'll can control with gamepad\/
 global.gamepad_controls = false
+//if true, game will have gamepad vibration, but it's laggy thing
+global.gamepad_vibration = false
 //if true, centers origin of buttons\/
 global.buttons_centered = true
 //will blue/orange attack react on keyboard or soul moves?\/

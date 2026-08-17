@@ -7,5 +7,7 @@ dialogue = true
 dialoguetext = "{font 0}{voice 0}So{sleep 10}.{sleep 10}.{sleep 10}.&Do you really&want to fight&with me?{pause}{clear}Anyway{sleep 4}.{sleep 4}.{sleep 4}.{sleep 4}.{pause}{clear}This turn will be laggy"
 flag = false
 endturntext = "* Wow, two attacks survived."
-if dialogue
+if dialogue{
 	battle_soul.moveable = 0
+}
+CC_Add(object_get_name(object_index))

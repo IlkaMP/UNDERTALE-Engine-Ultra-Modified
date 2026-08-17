@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Battle_AddAct",
+  "%Name":"Battle_SetAct",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Battle_AddAct",
+  "name":"Battle_SetAct",
   "parent":{
     "name":"Battle",
     "path":"folders/Scripts/Battle.yy",

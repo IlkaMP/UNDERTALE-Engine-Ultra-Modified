@@ -6,10 +6,12 @@ if flag = false{
 }
 if !instance_exists(a){
 	start=1
+	battle_soul.moveable = 1
 	Battle_SetTurnTime(-1)
 }
 } else{
 	start=1
+	battle_soul.moveable = 1
 	Battle_SetTurnTime(-1)
 }
 

@@ -111,7 +111,7 @@ if (Input_IsPressed(INPUT.CANCEL)) {
 	}
 
 }
-show_debug_message(items)
-show_debug_message(array_length(items)-1)
-show_debug_message(slot)
-show_debug_message("now:" + items[slot])
+//show_debug_message(items)
+//show_debug_message(array_length(items)-1)
+//show_debug_message(slot)
+//show_debug_message("now:" + items[slot])

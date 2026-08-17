@@ -14,7 +14,7 @@ miss = true
 _exp = 0;
 _gold = 0;
 //acts\/
-Battle_AddAct(1, "* Check", "* Test - ATK 1 DF 1")
-Battle_AddAct(2, "* Test Act", "* Lol it's just for test.")
+Battle_SetAct(1, "* Check", "* Test - ATK 1 DF 1")
+Battle_SetAct(2, "* Test Act", "* Lol it's just for test.")
 //write true to enable Flee, or just delete the script\/
 Battle_SetMenuMercyFleeEnabled(false)

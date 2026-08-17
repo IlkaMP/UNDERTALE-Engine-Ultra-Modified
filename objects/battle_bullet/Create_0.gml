@@ -25,3 +25,4 @@ point_at = 0;
 angle_offset = 180;
 processed = 0;
 dmg = 1
+hit_destroy = false

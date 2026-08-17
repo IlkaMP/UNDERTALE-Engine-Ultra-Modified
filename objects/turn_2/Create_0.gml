@@ -6,5 +6,7 @@ dialogue = false
 dialoguetext = "{font 0}{voice 0}Well{sleep 10}.{sleep 10}.{sleep 10}.{pause}{clear}{speed 5}Let's just start."
 flag = false
 endturntext = "* Nevermind, three attacks&  survived."
-if dialogue
+if dialogue{
 	battle_soul.moveable = 0
+}
+CC_Add(object_get_name(object_index))

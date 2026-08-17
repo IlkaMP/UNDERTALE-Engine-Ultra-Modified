@@ -10,7 +10,9 @@ var sid=audio_play_sound(snd_gb_release,0,0);
 audio_sound_pitch(sid,1.2);
 
 Camera_Shake(5,5,1,1,1,1);
+if global.gamepad_vibration{
 gamepad_set_vibration(0,0.5,0.5);
+}
 alarm[11]=10;
 alarm[3]=6;
 alarm[4]=8;

@@ -20,7 +20,7 @@ function CustomItem_Dice() : ItemType() constructor{
 			if(inventory.Add(ITEM_DICE)){
 				Dialog_Add("* You got another dice!&* Check your inventory.");
 			}else{
-				Dialog_Add("* A new dice wanted to jump into&  your inventory, but your inventory&  is too full!");
+				Dialog_Add("* A new dice wanted to jump into&  your inventory, but your&  inventory is too full!");
 			}
 		}else if(number==6){
 			Dialog_Add($"* This dice disappeared without&  a trace!");
