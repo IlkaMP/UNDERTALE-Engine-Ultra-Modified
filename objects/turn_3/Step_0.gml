@@ -1,23 +1,20 @@
-if dialogue == true and flag = false and dstart = true{
-if flag = false{
+if dialogue and !flag and dstart{
 	flag = true
     a = Battle_SetDialogEnemy(battle_enemy.xdialogue,battle_enemy.ydialogue, 0, 0);
     a.text = dialoguetext
 }
-}
-if dstart = true{
+if dstart{
 	if !instance_exists(a){
 		dend = true
 	}
 }
-
-if dend = false{
+if !dend{
 	td += 1
 	if td == 70{
 		dstart = true
 	}
 }
-if dend == true{
+if dend{
 	t+=1
 }
 if start and dend{

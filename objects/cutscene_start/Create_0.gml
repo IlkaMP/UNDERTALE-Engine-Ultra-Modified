@@ -1,3 +1,7 @@
+//BETTER TO NOT USE
+//if you will, in turn after cutscene will not work somethings
+//cause it's turn too
+//just use turns to make cutscenes better, ok?
 t = 0
 skippable = true
 turn_after = turn_start
