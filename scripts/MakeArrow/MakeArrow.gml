@@ -6,7 +6,7 @@
 ///@arg mode trueで黄色になる
 ///@arg follow_soul ソウルに追従するか
 ///@desc アンダインの槍を作成します。
-function Battle_MakeArrow(_dir,_speed=4,_distance=320,_target_shield=[0],_assist=true,_mode=0,_follow_soul=true){
+function MakeArrow(_dir,_speed=4,_distance=320,_target_shield=[0],_assist=true,_mode=0,_follow_soul=true){
 	var arrow = instance_create_depth(0,0,0,battle_bullet_arrow)
 	with(arrow) {
 		x = battle_soul.x+lengthdir_x(_distance,_dir)

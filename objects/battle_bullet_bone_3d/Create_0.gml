@@ -70,7 +70,7 @@ update_vert = function() {
 }
 
 add_edge = function(argument0, argument1) { // 添加边（不同点的序列）
-    var _prop = [argument0, argument1, Battle_MakeBone(900, 900, 0, 0, 0, type, out, 0, 0, 0, -1)];
+    var _prop = [argument0, argument1, MakeBone(900, 900, 0, 0, 0, type, out, 0, 0, 0, -1)];
     array_push(edge_list, _prop); // 将边压入 edge_list
     return;
 }

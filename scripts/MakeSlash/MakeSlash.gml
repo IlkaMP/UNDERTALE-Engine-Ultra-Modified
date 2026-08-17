@@ -4,7 +4,7 @@
 ///@arg color
 ///@arg *ghost
 ///@arg *spam
-function Battle_MakeSlash(){
+function MakeSlash(){
     var X = argument[0];
     var Y = argument[1];
     var ANGLE = argument[2];

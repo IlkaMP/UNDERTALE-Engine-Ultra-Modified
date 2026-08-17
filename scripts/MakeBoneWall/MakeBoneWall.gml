@@ -1,4 +1,4 @@
-function Battle_MakeBoneWallBottom(pause, length, duration, type = 0, follow = 0) {
+function MakeBoneWallBottom(pause, length, duration, type = 0, follow = 0) {
 
     var SPR_HEIGHT = max(sprite_get_height(spr_bone), sprite_get_height(spr_bone)) + 1;
     var ii = 0;
@@ -7,12 +7,12 @@ function Battle_MakeBoneWallBottom(pause, length, duration, type = 0, follow = 0
         ii += 1;
 
         if (duration != -1) {
-            b[ii] = Battle_MakeBone(((battle_board.x - battle_board.left) + i), (((battle_board.y + battle_board.down) + (length / 2)) + 5), length, 0, 0, type, 0,90, 0, 0, ((duration + (pause * 2)) + 24));
+            b[ii] = MakeBone(((battle_board.x - battle_board.left) + i), (((battle_board.y + battle_board.down) + (length / 2)) + 5), length, 0, 0, type, 0,90, 0, 0, ((duration + (pause * 2)) + 24));
 			if variable_global_exists("clearbonewalls"){
 				array_push(global.clearbonewalls, b[ii])
 			}
         } else {
-            b[ii] = Battle_MakeBone(((battle_board.x - battle_board.left) + i), (((battle_board.y + battle_board.down) + (length / 2)) + 5), length, 0, 0, type, 0,90, 0, 0, duration);
+            b[ii] = MakeBone(((battle_board.x - battle_board.left) + i), (((battle_board.y + battle_board.down) + (length / 2)) + 5), length, 0, 0, type, 0,90, 0, 0, duration);
 			if variable_global_exists("clearbonewalls"){
 			array_push(global.clearbonewalls, b[ii])
 			}
@@ -60,7 +60,7 @@ function Battle_MakeBoneWallBottom(pause, length, duration, type = 0, follow = 0
     return b;
 }
 
-function Battle_MakeBoneWallLeft(pause, length, duration, type = 0, follow = false) {
+function MakeBoneWallLeft(pause, length, duration, type = 0, follow = false) {
 
     var SPR_HEIGHT = max(sprite_get_height(spr_bone), sprite_get_height(spr_bone)) + 1;
     var ii = 0;
@@ -69,12 +69,12 @@ function Battle_MakeBoneWallLeft(pause, length, duration, type = 0, follow = fal
         ii += 1;
 
         if (duration != -1) {
-            b[ii] = Battle_MakeBone((((battle_board.x - battle_board.left) - (length / 2)) - 5), ((battle_board.y - battle_board.up) + i), length, 0, 0, type, 0,0, 0, 0, ((duration + (pause * 2)) + 24));
+            b[ii] = MakeBone((((battle_board.x - battle_board.left) - (length / 2)) - 5), ((battle_board.y - battle_board.up) + i), length, 0, 0, type, 0,0, 0, 0, ((duration + (pause * 2)) + 24));
 			if variable_global_exists("clearbonewalls"){
 				array_push(global.clearbonewalls, b[ii])
 			}
         } else {
-            b[ii] = Battle_MakeBone((((battle_board.x - battle_board.left) - (length / 2)) - 5), ((battle_board.y - battle_board.up) + i), length, 0, 0, type, 0, 0, 0, duration);
+            b[ii] = MakeBone((((battle_board.x - battle_board.left) - (length / 2)) - 5), ((battle_board.y - battle_board.up) + i), length, 0, 0, type, 0, 0, 0, duration);
 			if variable_global_exists("clearbonewalls"){
 				array_push(global.clearbonewalls, b[ii])
 			}
@@ -122,7 +122,7 @@ function Battle_MakeBoneWallLeft(pause, length, duration, type = 0, follow = fal
     return b;
 }
 
-function Battle_MakeBoneWallRight(pause, length, duration, type = 0, follow = false) {
+function MakeBoneWallRight(pause, length, duration, type = 0, follow = false) {
 
     var SPR_HEIGHT = max(sprite_get_height(spr_bone), sprite_get_height(spr_bone)) + 1;
     var ii = 0;
@@ -130,12 +130,12 @@ function Battle_MakeBoneWallRight(pause, length, duration, type = 0, follow = fa
     for (i = 0; i < ((battle_board.up + battle_board.down) + SPR_HEIGHT); i += SPR_HEIGHT) {
         ii += 1;
         if (duration != -1) {
-            b[ii] = Battle_MakeBone((((battle_board.x + battle_board.right) + (length / 2)) + 5), ((battle_board.y - battle_board.up) + i), length, 0, 0, type, 0,180, 0, 0, ((duration + (pause * 2)) + 24));
+            b[ii] = MakeBone((((battle_board.x + battle_board.right) + (length / 2)) + 5), ((battle_board.y - battle_board.up) + i), length, 0, 0, type, 0,180, 0, 0, ((duration + (pause * 2)) + 24));
 			if variable_global_exists("clearbonewalls"){
 				array_push(global.clearbonewalls, b[ii])
 			}
         } else {
-            b[ii] = Battle_MakeBone((((battle_board.x + battle_board.right) + (length / 2)) + 5), ((battle_board.y - battle_board.up) + i), length, 0, 0, type, 0,180, 0, 0, duration);
+            b[ii] = MakeBone((((battle_board.x + battle_board.right) + (length / 2)) + 5), ((battle_board.y - battle_board.up) + i), length, 0, 0, type, 0,180, 0, 0, duration);
 			if variable_global_exists("clearbonewalls"){
 				array_push(global.clearbonewalls, b[ii])
 			}
@@ -180,7 +180,7 @@ function Battle_MakeBoneWallRight(pause, length, duration, type = 0, follow = fa
     return b;
 }
 
-function Battle_MakeBoneWallTop(pause, length, duration, type = 0, follow = false) {
+function MakeBoneWallTop(pause, length, duration, type = 0, follow = false) {
 
     var SPR_HEIGHT = max(sprite_get_height(spr_bone), sprite_get_height(spr_bone)) + 1;
     var ii = 0;
@@ -188,12 +188,12 @@ function Battle_MakeBoneWallTop(pause, length, duration, type = 0, follow = fals
     for (i = -3; i < ((battle_board.left + battle_board.right) + SPR_HEIGHT); i += SPR_HEIGHT) {
         ii += 1;
         if (duration != -1) {
-            b[ii] = Battle_MakeBone(((battle_board.x - battle_board.left) + i), (((battle_board.y - battle_board.up) - (length / 2)) - 5), length, 0, 0, type, 0,-90, 0, 0, ((duration + (pause * 2)) + 24));
+            b[ii] = MakeBone(((battle_board.x - battle_board.left) + i), (((battle_board.y - battle_board.up) - (length / 2)) - 5), length, 0, 0, type, 0,-90, 0, 0, ((duration + (pause * 2)) + 24));
 			if variable_global_exists("clearbonewalls"){
 				array_push(global.clearbonewalls, b[ii])
 			}
         } else {
-            b[ii] = Battle_MakeBone(((battle_board.x - battle_board.left) + i), (((battle_board.y - battle_board.up) - (length / 2)) - 5), length, 0, 0, type, 0, -90,0, 0, duration);
+            b[ii] = MakeBone(((battle_board.x - battle_board.left) + i), (((battle_board.y - battle_board.up) - (length / 2)) - 5), length, 0, 0, type, 0, -90,0, 0, duration);
 			if variable_global_exists("clearbonewalls"){
 				array_push(global.clearbonewalls, b[ii])
 			}
@@ -237,9 +237,9 @@ function Battle_MakeBoneWallTop(pause, length, duration, type = 0, follow = fals
     return b;
 }
 
-function Battle_MakeBoneWallRound(rotatespeed, radius, type, pause, duration = -1) {
+function MakeBoneWallRound(rotatespeed, radius, type, pause, duration = -1) {
 
-    var bone = Battle_MakeBoneCircle(round((battle_board.down + battle_board.right + battle_board.left + battle_board.up) / 22), 0, type, battle_board.x, battle_board.y, (battle_board.down + battle_board.right + battle_board.left + battle_board.up) / 2, (battle_board.down + battle_board.right + battle_board.left + battle_board.up) / 2, 0, 0, 1, rotatespeed);
+    var bone = MakeBoneCircle(round((battle_board.down + battle_board.right + battle_board.left + battle_board.up) / 22), 0, type, battle_board.x, battle_board.y, (battle_board.down + battle_board.right + battle_board.left + battle_board.up) / 2, (battle_board.down + battle_board.right + battle_board.left + battle_board.up) / 2, 0, 0, 1, rotatespeed);
 
     Anim_Create(bone, "length", 0, 0, 0, 2 * (bone.size_x - radius - 5), 16, pause);
 

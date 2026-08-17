@@ -1,4 +1,4 @@
-function Battle_MakeGB(x, y, x_target, y_target, angle_start, angle_target, scale_x, scale_y, type, pause=25, duration=35, time_move=25) {
+function MakeGB(x, y, x_target, y_target, angle_start, angle_target, scale_x, scale_y, type, pause=25, duration=35, time_move=25) {
     var bb = instance_create_depth(x, y, DEPTH_BATTLE.BULLET_OUTSIDE_HIGH, battle_bullet_gb);    
     bb.x_target = x_target;
     bb.y_target = y_target;
@@ -19,6 +19,6 @@ function Battle_MakeGBRound(x, y, radius, type){
                 var sy = y + lengthdir_y(radius, i);
                 var xx = x + lengthdir_x(radius, i);
                 var yy = y + lengthdir_y(radius, i);
-                Battle_MakeGB(sx, sy, xx, yy, i - 105, i - 105, 1, 1, type, 2, 30, 0);
+                MakeGB(sx, sy, xx, yy, i - 105, i - 105, 1, 1, type, 2, 30, 0);
             }
 }

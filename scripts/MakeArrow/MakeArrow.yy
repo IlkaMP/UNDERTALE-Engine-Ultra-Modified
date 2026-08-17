@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Battle_MakePlatform",
+  "%Name":"MakeArrow",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Battle_MakePlatform",
+  "name":"MakeArrow",
   "parent":{
     "name":"Bullet",
     "path":"folders/Scripts/Battle/Bullet.yy",

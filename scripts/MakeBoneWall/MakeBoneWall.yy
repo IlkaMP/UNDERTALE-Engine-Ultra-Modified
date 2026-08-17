@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Battle_MakeGB",
+  "%Name":"MakeBoneWall",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Battle_MakeGB",
+  "name":"MakeBoneWall",
   "parent":{
-    "name":"Bullet",
-    "path":"folders/Scripts/Battle/Bullet.yy",
+    "name":"Bone",
+    "path":"folders/Scripts/Battle/Bullet/Bone.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

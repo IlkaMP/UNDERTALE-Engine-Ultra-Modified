@@ -1,5 +1,5 @@
 ///@arg x,y,length,hspeed,vspeed,type,out,angle,rotate,auto_destroy,duration,follow,follow_board,follow_target,follow_angle,point,point_at,follow_x,follow_y
-function Battle_MakeBone() {
+function MakeBone() {
     var OBJ = 0;
     var DURATION = -1;
     var X = argument[0];
@@ -67,7 +67,7 @@ function Battle_MakeBone() {
     return bone;
 }
 ///@arg x,length,hspeed,type,out,rotate,auto_destroy,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function Battle_MakeBoneBottom() {
+function MakeBoneBottom() {
     var X = argument[0];
     var LENGTH = argument[1];
     var HSPEED = argument[2];
@@ -100,11 +100,11 @@ function Battle_MakeBoneBottom() {
     if (argument[12] == 1) {
         Y = battle_board.y + battle_board.down;
     }
-    var bone = Battle_MakeBone(X, Y, LENGTH, HSPEED, 0, COLOR, OUT, 90, ROT, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
+    var bone = MakeBone(X, Y, LENGTH, HSPEED, 0, COLOR, OUT, 90, ROT, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
     return bone;
 }
 ///@arg y,length,vspeed,type,out,rotate,auto_destroy,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function Battle_MakeBoneLeft() {
+function MakeBoneLeft() {
     var Y = argument[0];
     var LENGTH = argument[1];
     var VSPEED = argument[2];
@@ -136,12 +136,12 @@ function Battle_MakeBoneLeft() {
     if (argument[12] == 1) {
         X = battle_board.x - battle_board.left;
     }
-    var bone = Battle_MakeBone(X, Y, LENGTH, 0, VSPEED, COLOR, OUT, 0, ROT, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
+    var bone = MakeBone(X, Y, LENGTH, 0, VSPEED, COLOR, OUT, 0, ROT, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
 
     return bone;
 }
 ///@arg y,length,vspeed,type,out,rotate,auto_destroy,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function Battle_MakeBoneRight() {
+function MakeBoneRight() {
     var Y = argument[0];
     var LENGTH = argument[1];
     var VSPEED = argument[2];
@@ -173,12 +173,12 @@ function Battle_MakeBoneRight() {
     if (argument[12] == 1) {
         X = battle_board.x + battle_board.right;
     }
-    var bone = Battle_MakeBone(X, Y, LENGTH, 0, VSPEED, COLOR, OUT, 180, ROT, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
+    var bone = MakeBone(X, Y, LENGTH, 0, VSPEED, COLOR, OUT, 180, ROT, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
 
     return bone;
 }
 ///@arg x,length,hspeed,type,out,rotate,auto_destroy,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function Battle_MakeBoneTop() {
+function MakeBoneTop() {
     var X = argument[0];
     var LENGTH = argument[1];
     var HSPEED = argument[2];
@@ -210,12 +210,12 @@ function Battle_MakeBoneTop() {
     if (argument[12] == 1) {
         Y = battle_board.y - battle_board.up;
     }
-    var bone = Battle_MakeBone(X, Y, LENGTH, HSPEED, 0, COLOR, OUT, 270, ROT, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD,FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
+    var bone = MakeBone(X, Y, LENGTH, HSPEED, 0, COLOR, OUT, 270, ROT, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD,FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
 
     return bone;
 }
 ///@arg x,y,vspeed,type,out,rotate,gap,auto_destroy,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function Battle_MakeBoneTwoH() {
+function MakeBoneTwoH() {
     var X = argument[0];
     var Y = argument[1];
     var VSPEED = argument[2];
@@ -247,15 +247,15 @@ function Battle_MakeBoneTwoH() {
         FOLLOW_Y = argument[16];
     }
 
-    var boneLeft = Battle_MakeBoneLeft(Y, (((X - battle_board.x) + battle_board.left) - GAP), VSPEED, TYPE, OUT, ROTATE, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
-    var boneRight = Battle_MakeBoneRight(Y, (((battle_board.x + battle_board.right) - GAP) - X), VSPEED, TYPE, OUT, ROTATE, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
+    var boneLeft = MakeBoneLeft(Y, (((X - battle_board.x) + battle_board.left) - GAP), VSPEED, TYPE, OUT, ROTATE, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
+    var boneRight = MakeBoneRight(Y, (((battle_board.x + battle_board.right) - GAP) - X), VSPEED, TYPE, OUT, ROTATE, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
 
     bones[0] = boneLeft;
     bones[1] = boneRight;
     return bones;
 }
 ///@arg x,y,hspeed,type,out,rotate,gap,auto_destroy,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function Battle_MakeBoneTwoV() {
+function MakeBoneTwoV() {
     var X = argument[0];
     var Y = argument[1];
     var HSPEED = argument[2];
@@ -287,15 +287,15 @@ function Battle_MakeBoneTwoV() {
         FOLLOW_Y = argument[16];
     }
 
-    var boneLeft = Battle_MakeBoneTop(X, (((Y - battle_board.y) + battle_board.up) - GAP), HSPEED, TYPE, OUT, ROTATE, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
-    var boneRight = Battle_MakeBoneBottom(X, (((battle_board.y + battle_board.down) - GAP) - Y), HSPEED, TYPE, OUT, ROTATE, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
+    var boneLeft = MakeBoneTop(X, (((Y - battle_board.y) + battle_board.up) - GAP), HSPEED, TYPE, OUT, ROTATE, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
+    var boneRight = MakeBoneBottom(X, (((battle_board.y + battle_board.down) - GAP) - Y), HSPEED, TYPE, OUT, ROTATE, DESTROY, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
 
     bones[0] = boneLeft;
     bones[1] = boneRight;
     return bones;
 }
 ///@arg number,angle,type,x,y,size_x,size_y,length,out,*roting,*rot,*extra_angle,*rotate,*duration,*rott
-function Battle_MakeBoneCircle() {
+function MakeBoneCircle() {
     var Number = argument[0]
     var Size = argument[1]
     var Type = argument[2]
@@ -327,7 +327,7 @@ function Battle_MakeBoneCircle() {
     return bone;
 }
 /// @arg x,y,angle_x,angle_y,angle_z,rotate_x,rotate_y,rotate_z,scale_x,scale_y,scale_z,vspeed,hspeed,shape,type,out,*duration,*gap
-function Battle_MakeBone3D() {
+function MakeBone3D() {
     var _x = argument[0];
     var _y = argument[1];
     var angle_x = argument[2];
@@ -366,7 +366,7 @@ function Battle_MakeBone3D() {
     return inst;
 }
 ///@arg x,y,length,hspeed,vspeed,type,out,angle,rotate,auto_destroy,*duration,*scale,*extra_angle,*follow,*follow_board,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function Battle_MakeBoneArrow() {
+function MakeBoneArrow() {
     var OBJ = 0;
     var DURATION = -1;
     var SCALE = 0.5;
@@ -419,7 +419,7 @@ function MakeBonesFly(Dir = DIR.UP, Length = 20, Type = 0){
 		
 		repeat (20)
     {
-        var bone = Battle_MakeBone(rand + (cnm * 25), battle_board.y - battle_board.up - 5, 20, 0, 0, Type, 0, 90, 0, 1);
+        var bone = MakeBone(rand + (cnm * 25), battle_board.y - battle_board.up - 5, 20, 0, 0, Type, 0, 90, 0, 1);
         bone.length = Length;
         bone.vspeed = 4;
         cnm += 1;
@@ -432,7 +432,7 @@ function MakeBonesFly(Dir = DIR.UP, Length = 20, Type = 0){
 		
 		repeat (20)
     {
-        var bone = Battle_MakeBone(rand + (cnm * 25), battle_board.y + battle_board.down + 5, 20, 0, 0, Type, 0, 90, 0, 1);
+        var bone = MakeBone(rand + (cnm * 25), battle_board.y + battle_board.down + 5, 20, 0, 0, Type, 0, 90, 0, 1);
         bone.length = Length;
         bone.vspeed = -4;
         cnm += 1;
@@ -445,7 +445,7 @@ function MakeBonesFly(Dir = DIR.UP, Length = 20, Type = 0){
 		
 		repeat (20)
     {
-        var bone = Battle_MakeBone(battle_board.x - battle_board.left - 5, rand + (cnm * 25), 20, 0, 0, Type, 0, 0, 0, 1);
+        var bone = MakeBone(battle_board.x - battle_board.left - 5, rand + (cnm * 25), 20, 0, 0, Type, 0, 0, 0, 1);
         bone.length = Length;
         bone.hspeed = 4;
         cnm += 1;
@@ -458,7 +458,7 @@ function MakeBonesFly(Dir = DIR.UP, Length = 20, Type = 0){
 		
 		repeat (20)
     {
-        var bone = Battle_MakeBone(battle_board.x + battle_board.right + 5, rand + (cnm * 25), 20, 0, 0, Type, 0, 0, 0, 1);
+        var bone = MakeBone(battle_board.x + battle_board.right + 5, rand + (cnm * 25), 20, 0, 0, Type, 0, 0, 0, 1);
         bone.length = Length;
         bone.hspeed = -4;
         cnm += 1;
@@ -471,10 +471,10 @@ function MakeBonesWaveUpDown(Strength, Y, Type){
     
     repeat (15)
     {
-        b[1] = Battle_MakeBone(320 + (cnm * 12), Y, 0, 0, 0, Type, 0, 90, 0, 0, 90);
+        b[1] = MakeBone(320 + (cnm * 12), Y, 0, 0, 0, Type, 0, 90, 0, 0, 90);
         Anim_Create(b[1], "length", 2, 1, 0, Strength, 25, 2 + (cnm * 2));
         Anim_Create(b[1], "length", 2, 0, Strength, -Strength, 25, 27 + (cnm * 2));
-        b[2] = Battle_MakeBone(320 - (cnm * 12), Y, 0, 0, 0, 0, 0, 90, 0, 0, 90);
+        b[2] = MakeBone(320 - (cnm * 12), Y, 0, 0, 0, 0, 0, 90, 0, 0, 90);
         Anim_Create(b[2], "length", 2, 1, 0, Strength, 25, 2 + (cnm * 2));
         Anim_Create(b[2], "length", 2, 0, Strength, -Strength, 25, 27 + (cnm * 2));
         cnm += 1;
@@ -485,10 +485,10 @@ function MakeBonesWaveLeftRight(Strength, X, Type){
     
     repeat (15)
     {
-        b[1] = Battle_MakeBone(X, 320 + (cnm * 12), 0, 0, 0, Type, 0, 0, 0, 0, 90);
+        b[1] = MakeBone(X, 320 + (cnm * 12), 0, 0, 0, Type, 0, 0, 0, 0, 90);
         Anim_Create(b[1], "length", 2, 1, 0, Strength, 25, 2 + (cnm * 2));
         Anim_Create(b[1], "length", 2, 0, Strength, -Strength, 25, 27 + (cnm * 2));
-        b[2] = Battle_MakeBone(X, 320 - (cnm * 12), 0, 0, 0, 0, 0, 0, 0, 0, 90);
+        b[2] = MakeBone(X, 320 - (cnm * 12), 0, 0, 0, 0, 0, 0, 0, 0, 90);
         Anim_Create(b[2], "length", 2, 1, 0, Strength, 25, 2 + (cnm * 2));
         Anim_Create(b[2], "length", 2, 0, Strength, -Strength, 25, 27 + (cnm * 2));
         cnm += 1;
@@ -501,7 +501,7 @@ function MakeBonesColumn(X, Y, Angle, Bones, Length, PlusX, LenPlus, Hspeed, Vsp
         var xplus = PlusX * repeats;
         var lenplus = LenPlus * repeats; 
         
-        Battle_MakeBone(X + xplus, Y - lenplus / 2, Length + lenplus, Hspeed, Vspeed, Type, Out, Angle, 0, 0, 0);
+        MakeBone(X + xplus, Y - lenplus / 2, Length + lenplus, Hspeed, Vspeed, Type, Out, Angle, 0, 0, 0);
     }
 }
 function MakeBonesExplosion(X, Y, Bones, Length, Speed, Out, Type) {
@@ -509,7 +509,7 @@ function MakeBonesExplosion(X, Y, Bones, Length, Speed, Out, Type) {
         var angle = random(360);
         var hsp = lengthdir_x(Speed, angle);
         var vsp = lengthdir_y(Speed, angle);
-        Battle_MakeBone(X, Y, Length, hsp, vsp, Type, Out, angle, 0, 0, 0);
+        MakeBone(X, Y, Length, hsp, vsp, Type, Out, angle, 0, 0, 0);
     }
 }
 function MakeBonesWaveNew(Distance, BoneType, Direction, TimeToEnd, WaveTimer){

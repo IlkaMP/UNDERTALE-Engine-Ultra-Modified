@@ -20,11 +20,11 @@ if start{
 	}
 if t == 50{
 	Fader_Fade(1, 0, 10, 0, c_red)
-	Battle_MakeSlash(bx, by, DIR.UP-45, 0)
-	paps = Battle_MakeBone(bx, by, 65, 0, 0, TYPE.ORANGE, 0, 0, 10, 0, 0, 0, 0)
+	MakeSlash(bx, by, DIR.UP-45, 0)
+	paps = MakeBone(bx, by, 65, 0, 0, TYPE.ORANGE, 0, 0, 10, 0, 0, 0, 0)
 	paps.paps = 1
 	paps.point = 1
-	Battle_MakeGB(0, 0, bx - 200, by, 0, DIR.RIGHT, 2, 2, 0)
+	MakeGB(0, 0, bx - 200, by, 0, DIR.RIGHT, 2, 2, 0)
 }
 if t == 250{
 	Battle_EndTurn()

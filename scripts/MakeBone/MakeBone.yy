@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Battle_MakeBone",
+  "%Name":"MakeBone",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Battle_MakeBone",
+  "name":"MakeBone",
   "parent":{
     "name":"Bone",
     "path":"folders/Scripts/Battle/Bullet/Bone.yy",
