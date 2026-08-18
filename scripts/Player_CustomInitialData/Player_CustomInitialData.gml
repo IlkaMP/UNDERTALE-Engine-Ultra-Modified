@@ -4,7 +4,7 @@ function Player_CustomInitialData(){
 	Player_SetName("PLAYER");
 	//player lv\/
 	Player_SetLv(1);
-	// you can choose this method to set HP automatically by level or just set hp yourself\/
+	// you can choose this method to set HP automatically by level or just set hp by yourself\/
     Player_SetHpMax(20 + (Player_GetLv() - 1) * 4)
 	Player_SetHp(Player_GetHpMax())
 	//Player_SetHpMax(20);
@@ -15,8 +15,9 @@ function Player_CustomInitialData(){
 	Player_SetSpd(2);
 	Player_SetInv(40);
 	Player_SetKr(0);
+	//it will set whats weapon object will be used\/
 	Player_SetBattleFightMenuObj(battle_menu_fight_knife);
-	
+	//items. check Item_Custom if you need to add yours\/
 	var items=Item_GetInventoryItems();
 	items.Add(ITEM_TOY_KNIFE);
 	items.Add(ITEM_TOUGH_GLOVE);
@@ -26,22 +27,31 @@ function Player_CustomInitialData(){
 	items.Add(ITEM_DICE);
 	items.Add(ITEM_BANDAGE);
 	items.Add(ITEM_PELMENI);
+	/*
+	//like that you can set items anywhere\/
+	var i=Item_GetInventoryItems()
+	if (Item_GetNumber()-1>=3){
+		i.Set(0,ITEM_DICE)
+	}
+	*/
+	//umm.. phones?\/
 	var phones=Item_GetInventoryPhones();
 	phones.Add(ITEM_PHONE_TML);
-	
+	//weapons by default\/
 	Player_SetItemWeapon(ITEM_STICK);
 	Player_SetItemArmor(ITEM_BANDAGE);
-	//makes all of the bones Papyrused
+	//if enabled, makes all of the bones Papyrused\/
     global.papsbones = false
-    //set false to disable blur
+    //set false to disable blur\/
     global.blur = true
 	//shaking on souls slams and other...\/
 	global.shaking = false
-	//if enabled item system will be just like in undertale
+	//if enabled item system will be just like in undertale\/
 	global.vanilla_items = false
     //classic ui from undertale or new?\/
     global.classic_ui = false
     global.classic_ui_spr = false
-    //Set var to false/0 to disable kr
+    //Set this var to false/0 to disable kr\/
     global.kr = true
+	//check "world" object for other settings
 }

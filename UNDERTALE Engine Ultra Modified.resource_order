@@ -473,6 +473,7 @@
     {"name":"spr_battle_button_mercy_classic","order":5,"path":"sprites/spr_battle_button_mercy_classic/spr_battle_button_mercy_classic.yy",},
     {"name":"spr_battle_cloud","order":12,"path":"sprites/spr_battle_cloud/spr_battle_cloud.yy",},
     {"name":"spr_battle_damage","order":2,"path":"sprites/spr_battle_damage/spr_battle_damage.yy",},
+    {"name":"spr_battle_menu_fight_bg_classic","order":2,"path":"sprites/spr_battle_menu_fight_bg_classic/spr_battle_menu_fight_bg_classic.yy",},
     {"name":"spr_battle_menu_fight_glove_z","order":1,"path":"sprites/spr_battle_menu_fight_glove_z/spr_battle_menu_fight_glove_z.yy",},
     {"name":"spr_battle_platform_green_rounded","order":1,"path":"sprites/spr_battle_platform_green_rounded/spr_battle_platform_green_rounded.yy",},
     {"name":"spr_battle_platform_purple_rounded","order":2,"path":"sprites/spr_battle_platform_purple_rounded/spr_battle_platform_purple_rounded.yy",},

@@ -736,6 +736,7 @@
     {"id":{"name":"spr_battle_dialog_enemy_spike","path":"sprites/spr_battle_dialog_enemy_spike/spr_battle_dialog_enemy_spike.yy",},},
     {"id":{"name":"spr_battle_menu_fight_aim","path":"sprites/spr_battle_menu_fight_aim/spr_battle_menu_fight_aim.yy",},},
     {"id":{"name":"spr_battle_menu_fight_anim_knife","path":"sprites/spr_battle_menu_fight_anim_knife/spr_battle_menu_fight_anim_knife.yy",},},
+    {"id":{"name":"spr_battle_menu_fight_bg_classic","path":"sprites/spr_battle_menu_fight_bg_classic/spr_battle_menu_fight_bg_classic.yy",},},
     {"id":{"name":"spr_battle_menu_fight_bg","path":"sprites/spr_battle_menu_fight_bg/spr_battle_menu_fight_bg.yy",},},
     {"id":{"name":"spr_battle_menu_fight_glove_z","path":"sprites/spr_battle_menu_fight_glove_z/spr_battle_menu_fight_glove_z.yy",},},
     {"id":{"name":"spr_battle_menu_fight_glove","path":"sprites/spr_battle_menu_fight_glove/spr_battle_menu_fight_glove.yy",},},

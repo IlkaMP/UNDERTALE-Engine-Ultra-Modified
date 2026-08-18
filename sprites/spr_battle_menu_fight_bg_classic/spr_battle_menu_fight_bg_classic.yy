@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_battle_menu_fight_bg",
+  "%Name":"spr_battle_menu_fight_bg_classic",
   "bboxMode":0,
-  "bbox_bottom":114,
+  "bbox_bottom":115,
   "bbox_left":0,
-  "bbox_right":545,
+  "bbox_right":543,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"0f9b2896-a562-4788-be74-fa353994cddc","name":"0f9b2896-a562-4788-be74-fa353994cddc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"45200a19-a966-4eb3-9f21-ca5de06c0efb","name":"45200a19-a966-4eb3-9f21-ca5de06c0efb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":115,
+  "height":116,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"d6bb7614-3bf5-402d-8531-481276fb7d50","blendMode":0,"displayName":"default","isLocked":false,"name":"d6bb7614-3bf5-402d-8531-481276fb7d50","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"0c59e1ab-f3a0-4551-90ce-dce81b77a030","blendMode":0,"displayName":"default","isLocked":false,"name":"0c59e1ab-f3a0-4551-90ce-dce81b77a030","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_battle_menu_fight_bg",
+  "name":"spr_battle_menu_fight_bg_classic",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"",
+    "%Name":"spr_battle_menu_fight_bg_classic",
     "autoRecord":true,
     "backdropHeight":1080,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"",
+    "name":"spr_battle_menu_fight_bg_classic",
     "playback":1,
     "playbackSpeed":15.0,
     "playbackSpeedType":0,
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0f9b2896-a562-4788-be74-fa353994cddc","path":"sprites/spr_battle_menu_fight_bg/spr_battle_menu_fight_bg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"72357de8-c501-4b61-ba3d-857d243099ad","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"45200a19-a966-4eb3-9f21-ca5de06c0efb","path":"sprites/spr_battle_menu_fight_bg_classic/spr_battle_menu_fight_bg_classic.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5ad74181-23b4-4d6a-90e1-b9e26c17c28b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":273,
-    "yorigin":57,
+    "xorigin":272,
+    "yorigin":58,
   },
   "swatchColours":null,
   "swfPrecision":2.525,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":546,
+  "width":544,
 }
