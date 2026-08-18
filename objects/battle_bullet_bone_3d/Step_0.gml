@@ -34,7 +34,8 @@ if (enable) {
             _bone.depth = (depth + ((z1 + z2) / 2));                       
             _bone.length = max(0, (point_distance(x1, y1, x2, y2) + 10 - gap) - (len3 / ((abs((z1 - z2)) / 50) + 5)));  
             _bone.angle = point_direction(x1, y1, x2, y2);  
-            _bone.type = type;   
+            _bone.type = type;
+			_bone.paps = paps;  
             _bone.out = out;  
         }  
     }  

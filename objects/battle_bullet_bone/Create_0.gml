@@ -30,3 +30,11 @@ if (point = 1) {
     sprite_index = spr_bone_paps;
 }
 }
+
+sine_growth = false;
+cos_growth = false
+base_length = 20;
+growth_amplitude = 0;
+growth_speed = 0.1;
+growth_time = 0;
+growth_offset = 0;

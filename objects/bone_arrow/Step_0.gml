@@ -7,7 +7,10 @@ b[i].y=y
 }
 b[0].length=length
 b[0].angle=angle
+b[0].paps=paps
 b[1].length=length*scale
 b[1].angle=angle+extra_angle
+b[1].paps=paps
 b[2].length=length*scale
 b[2].angle=angle-extra_angle
+b[2].paps=paps

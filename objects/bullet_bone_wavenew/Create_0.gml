@@ -26,3 +26,4 @@ TimeToEnd = 0
 speedwalls = 5
 bones = ds_list_create()
 deleteafter = true
+paps = 0

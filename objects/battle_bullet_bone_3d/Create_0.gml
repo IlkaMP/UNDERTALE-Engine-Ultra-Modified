@@ -26,6 +26,7 @@ shape = 0;
 out = 0;
 type = 0;
 gap = 40;
+paps=0;
 
 #region
 add_vert = function(argument0, argument1, argument2, argument3) { // 添加顶点坐标

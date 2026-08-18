@@ -9,7 +9,7 @@ Anim_Create(id, "image_alpha", 1, 2, 1, -1, 25)
 Anim_Create(id, "image_xscale", 1, 2, 2, 3, 30)
 Anim_Create(id, "image_yscale", 1, 2, 2, 3, 30)
 repeat(Warning.bonecount){
-	var bone = MakeBone(x, y, Warning.lengthbones, 0, 0, Warning.type, Warning.out, 90, Warning.rotating, 0)
+	var bone = MakeBone(x, y, Warning.lengthbones, 0, 0, Warning.type, Warning.out, 90, Warning.rotating, 0, Warning.paps)
 	with(bone){
 		gravity=Warning.gravityneed;
 		gravity_direction=DIR.DOWN;

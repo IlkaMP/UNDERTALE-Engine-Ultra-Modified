@@ -12,13 +12,13 @@ function MakeGB(x, y, x_target, y_target, angle_start, angle_target, scale_x, sc
     bb.time_move = time_move;
     return bb;
 }
-function Battle_MakeGBRound(x, y, radius, type){
-		for (var i = 0; i < 360; i += 45)
-            {
-                var sx = x + lengthdir_x(radius, i);
-                var sy = y + lengthdir_y(radius, i);
-                var xx = x + lengthdir_x(radius, i);
-                var yy = y + lengthdir_y(radius, i);
-                MakeGB(sx, sy, xx, yy, i - 105, i - 105, 1, 1, type, 2, 30, 0);
-            }
+function MakeGBRound(x, y, radius, type){
+	for (var i = 0; i < 360; i += 45)
+    {
+        var sx = x + lengthdir_x(radius, i);
+        var sy = y + lengthdir_y(radius, i);
+        var xx = x + lengthdir_x(radius, i);
+        var yy = y + lengthdir_y(radius, i);
+        MakeGB(sx, sy, xx, yy, i - 105, i - 105, 1, 1, type, 2, 30, 0);
+    }
 }
