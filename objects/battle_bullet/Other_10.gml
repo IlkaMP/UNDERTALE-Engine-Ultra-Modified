@@ -1,5 +1,6 @@
 switch (type) {
     case 0:
+		hit = true
 	    if !global.kr
 			Battle_CallSoulEventHurt()
 		if (global.kr) {
@@ -11,7 +12,8 @@ switch (type) {
         break;
     case 1:
         if (global.attack_keyboard_mode ? (keyboard_check(vk_left) || keyboard_check(vk_right) || keyboard_check(vk_up) || keyboard_check(vk_down)) : global.moving) {
-	    if !global.kr
+	    hit = true
+		if !global.kr
 			Battle_CallSoulEventHurt()
 		if (global.kr) {
 		if (dmg != 0)
@@ -23,7 +25,8 @@ switch (type) {
         break;
     case 2:
         if (global.attack_keyboard_mode ? !(keyboard_check(vk_left) || keyboard_check(vk_right) || keyboard_check(vk_up) || keyboard_check(vk_down)) : !global.moving) {
-	    if !global.kr
+	    hit = true
+		if !global.kr
 			Battle_CallSoulEventHurt()
 		if (global.kr) {
 		if (dmg != 0)
@@ -37,6 +40,7 @@ switch (type) {
         Player_Heal(1);
         break;
     case 4:
+		hit = true
 		if !global.kr
 			Battle_CallSoulEventHurt()
 		if (global.kr) {

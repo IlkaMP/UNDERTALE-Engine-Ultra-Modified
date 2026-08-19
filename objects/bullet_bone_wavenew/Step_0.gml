@@ -3,7 +3,7 @@ if WaveType == DIR.RIGHT and deleteafter == false{
     if wave_time < TimeToEnd{
     if (bone_timer <= 0)
     {
-        bonx = battle_board.x + battle_board.right;
+        bonx = battle_board.x + battle_board.right+14;
         bony = wave_offset + (wave_amplitude * sin(wave_time * wave_frequency));
         MakeBone(bonx, bony - DistanceB, 120, -speedwalls, 0, BoneType, 0, 90, 0, 0, paps);
         bonx += 10;
@@ -15,7 +15,7 @@ if WaveType == DIR.RIGHT and deleteafter == false{
     if wave_time2 < TimeToEnd{
     if (bone_timer2 <= 0)
     {
-        bonx2 = battle_board.x + battle_board.right;
+        bonx2 = battle_board.x + battle_board.right+14;
         bony2 = wave_offset2 + (wave_amplitude2 * sin(wave_time2 * wave_frequency2));
         MakeBone(bonx2, bony2 + DistanceB, 120, -speedwalls, 0, BoneType, 0, 90, 0, 0, paps);
         bonx2 += 10;
@@ -30,7 +30,7 @@ if WaveType == DIR.RIGHT and deleteafter == true{
     if wave_time < TimeToEnd{
     if (bone_timer <= 0)
     {
-        bonx = battle_board.x + battle_board.right;
+        bonx = battle_board.x + battle_board.right+14;
         bony = wave_offset + (wave_amplitude * sin(wave_time * wave_frequency));
         up = MakeBone(bonx, bony - DistanceB, 120, -speedwalls, 0, BoneType, 0, 90, 0, 0, paps);
 		ds_list_add(bones, up)
@@ -43,7 +43,7 @@ if WaveType == DIR.RIGHT and deleteafter == true{
     if wave_time2 < TimeToEnd{
     if (bone_timer2 <= 0)
     {
-        bonx2 = battle_board.x + battle_board.right;
+        bonx2 = battle_board.x + battle_board.right+14;
         bony2 = wave_offset2 + (wave_amplitude2 * sin(wave_time2 * wave_frequency2));
         down = MakeBone(bonx2, bony2 + DistanceB, 120, -speedwalls, 0, BoneType, 0, 90, 0, 0, paps);
 		ds_list_add(bones, down)
@@ -77,7 +77,7 @@ if WaveType == DIR.LEFT and deleteafter == false{
     if wave_time < TimeToEnd{
     if (bone_timer <= 0)
     {
-        bonx = battle_board.x - battle_board.left;
+        bonx = battle_board.x - battle_board.left-14;
         bony = wave_offset + (wave_amplitude * sin(wave_time * wave_frequency));
         MakeBone(bonx, bony - DistanceB, 120, speedwalls, 0, BoneType, 0, 90, 0, 0, paps);
         bonx += 10;
@@ -89,7 +89,7 @@ if WaveType == DIR.LEFT and deleteafter == false{
     if wave_time2 < TimeToEnd{
     if (bone_timer2 <= 0)
     {
-        bonx2 = battle_board.x - battle_board.left;
+        bonx2 = battle_board.x - battle_board.left-14;
         bony2 = wave_offset2 + (wave_amplitude2 * sin(wave_time2 * wave_frequency2));
         MakeBone(bonx2, bony2 + DistanceB, 120, speedwalls, 0, BoneType, 0, 90, 0, 0, paps);
         bonx2 += 10;
@@ -103,7 +103,7 @@ if WaveType == DIR.LEFT and deleteafter == true{
     if wave_time < TimeToEnd{
     if (bone_timer <= 0)
     {
-        bonx = battle_board.x - battle_board.left;
+        bonx = battle_board.x - battle_board.left-14;
         bony = wave_offset + (wave_amplitude * sin(wave_time * wave_frequency));
         up = MakeBone(bonx, bony - DistanceB, 120, speedwalls, 0, BoneType, 0, 90, 0, 0, paps);
 		ds_list_add(bones, up)
@@ -116,7 +116,7 @@ if WaveType == DIR.LEFT and deleteafter == true{
     if wave_time2 < TimeToEnd{
     if (bone_timer2 <= 0)
     {
-        bonx2 = battle_board.x - battle_board.left;
+        bonx2 = battle_board.x - battle_board.left-14;
         bony2 = wave_offset2 + (wave_amplitude2 * sin(wave_time2 * wave_frequency2));
         down = MakeBone(bonx2, bony2 + DistanceB, 120, speedwalls, 0, BoneType, 0, 90, 0, 0, paps);
 		ds_list_add(bones, down)
@@ -149,7 +149,7 @@ if WaveType == DIR.UP and deleteafter == false{
     if wave_time3 < TimeToEnd{
     if (bone_timer3 <= 0)
     {
-        by3 = battle_board.y - battle_board.up;
+        by3 = battle_board.y - battle_board.up-14;
         bx3 = wave_offset3 + (wave_amplitude3 * sin(wave_time3 * wave_frequency3));
         MakeBone(bx3 - DistanceB, by3, 120, 0, speedwalls, 0, 0, 0, 0, 0, paps);
         bx3 += 10;
@@ -161,7 +161,7 @@ if WaveType == DIR.UP and deleteafter == false{
     if wave_time4 < TimeToEnd{
     if (bone_timer4 <= 0)
     {
-        by4 = battle_board.y - battle_board.up;
+        by4 = battle_board.y - battle_board.up-14;
         bx4 = wave_offset4 + (wave_amplitude4 * sin(wave_time4 * wave_frequency4));
         MakeBone(bx4 + DistanceB, by4, 120, 0, speedwalls, 0, 0, 0, 0, 0, paps);
         bx4 += 10;
@@ -175,7 +175,7 @@ if WaveType == DIR.UP and deleteafter == true{
     if wave_time3 < TimeToEnd{
     if (bone_timer3 <= 0)
     {
-        by3 = battle_board.y - battle_board.up;
+        by3 = battle_board.y - battle_board.up-14;
         bx3 = wave_offset3 + (wave_amplitude3 * sin(wave_time3 * wave_frequency3));
         up = MakeBone(bx3 - DistanceB, by3, 120, 0, speedwalls, 0, 0, 0, 0, 0, paps);
 		ds_list_add(bones, up)
@@ -188,7 +188,7 @@ if WaveType == DIR.UP and deleteafter == true{
     if wave_time4 < TimeToEnd{
     if (bone_timer4 <= 0)
     {
-        by4 = battle_board.y - battle_board.up;
+        by4 = battle_board.y - battle_board.up-14;
         bx4 = wave_offset4 + (wave_amplitude4 * sin(wave_time4 * wave_frequency4));
         down = MakeBone(bx4 + DistanceB, by4, 120, 0, speedwalls, 0, 0, 0, 0, 0, paps);
 		ds_list_add(bones, down)
@@ -221,7 +221,7 @@ if WaveType == DIR.DOWN and deleteafter == false{
     if wave_time3 < TimeToEnd{
     if (bone_timer3 <= 0)
     {
-        by3 = battle_board.y + battle_board.down;
+        by3 = battle_board.y + battle_board.down+14;
         bx3 = wave_offset3 + (wave_amplitude3 * sin(wave_time3 * wave_frequency3));
         MakeBone(bx3 - DistanceB, by3, 120, 0, -speedwalls, 0, 0, 0, 0, 0, paps);
         bx3 += 10;
@@ -233,7 +233,7 @@ if WaveType == DIR.DOWN and deleteafter == false{
     if wave_time4 < TimeToEnd{
     if (bone_timer4 <= 0)
     {
-        by4 = battle_board.y + battle_board.down;
+        by4 = battle_board.y + battle_board.down+14;
         bx4 = wave_offset4 + (wave_amplitude4 * sin(wave_time4 * wave_frequency4));
         MakeBone(bx4 + DistanceB, by4, 120, 0, -speedwalls, 0, 0, 0, 0, 0, paps);
         bx4 += 10;
@@ -247,7 +247,7 @@ if WaveType == DIR.DOWN and deleteafter == true{
     if wave_time3 < TimeToEnd{
     if (bone_timer3 <= 0)
     {
-        by3 = battle_board.y + battle_board.down;
+        by3 = battle_board.y + battle_board.down+14;
         bx3 = wave_offset3 + (wave_amplitude3 * sin(wave_time3 * wave_frequency3));
         up = MakeBone(bx3 - DistanceB, by3, 120, 0, -speedwalls, 0, 0, 0, 0, 0, paps);
 		ds_list_add(bones, up)
@@ -260,7 +260,7 @@ if WaveType == DIR.DOWN and deleteafter == true{
     if wave_time4 < TimeToEnd{
     if (bone_timer4 <= 0)
     {
-        by4 = battle_board.y + battle_board.down;
+        by4 = battle_board.y + battle_board.down+14;
         bx4 = wave_offset4 + (wave_amplitude4 * sin(wave_time4 * wave_frequency4));
         down = MakeBone(bx4 + DistanceB, by4, 120, 0, -speedwalls, 0, 0, 0, 0, 0, paps);
 		ds_list_add(bones, down)

@@ -43,12 +43,13 @@ function MakeBone(X=instance_exists(battle_board) ? battle_board.x : 320, Y=inst
     }
     return bone;
 }
-///@arg x,y,angle,hspeed,vspeed,rot,length,type,out,auto_destroy,is_paps,*duration,*use_cos,*amplitude,*speed,*offset,*follow,*follow_board,*follow_targer,*follow_angle,*point,*point_at,*follow_x,*follow_y
+///@arg x,y,angle,hspeed,vspeed,rot,length,type,out,auto_destroy,is_paps,*duration,*use_cos,*amplitude,*speed,*offset,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
 function MakeBoneSin(X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, ANGLE, HSPEED, VSPEED, ROT, LENGTH, TYPE, OUT, DESTROY, PAPS=0, DURATION=-1, USE_COS, AMPLITUDE=20, SPEED=0.1, OFFSET=0, OBJ=noone, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone)
 {
-    var bone = instance_create_depth(X, Y, (-500 << 0), battle_bullet_bone);
+    var bone = instance_create_depth(X, Y, 0, battle_bullet_bone);
     bone.angle = ANGLE;
-    bone.virtual[2] = ANGLE;
+    bone._angle = ANGLE;
+	bone.virtual[2] = ANGLE;
     bone.hspeed = HSPEED;
     bone.vspeed = VSPEED;
     bone.rotate = ROT;

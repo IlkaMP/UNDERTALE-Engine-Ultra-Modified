@@ -376,13 +376,7 @@ if (Battle_GetState() == BATTLE_STATE.IN_TURN && moveable) {
         } else {
             global.moving = 0;
         }
-    } else if (jump_state == 2) {
-        if (xprevious != x && yprevious != y) {
-            global.moving = 1;
-        } else {
-            global.moving = 0;
-        }
-    } else {
-        global.moving = 1;
+    } else{
+		global.moving = 1;
     }
 }
