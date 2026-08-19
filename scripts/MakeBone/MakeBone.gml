@@ -332,14 +332,13 @@ function MakeBonesWaveLeftRight(Strength, X, Type, is_paps=0){
         cnm += 1;
     }
 }
-function MakeBonesColumn(X, Y, Angle, Bones, Length, PlusX, LenPlus, Hspeed, Vspeed, Out, Type, is_paps=0) {
+function MakeBonesColumn(X, Y, Angle, Bones, Length, PlusX, LenPlus, Hspeed, Vspeed, Out, Type, is_paps=0, Duration=0, Follow=noone, Follow_board=false, Follow_target=noone, Follow_angle=noone) {
     var repeats = 0;
     repeat (Bones) {
         repeats += 1;
         var xplus = PlusX * repeats;
-        var lenplus = LenPlus * repeats; 
-        
-        MakeBone(X + xplus, Y - lenplus / 2, Length + lenplus, Hspeed, Vspeed, Type, Out, Angle, 0, 0, is_paps, 0, 0, 0);
+        var lenplus = LenPlus * repeats;
+        MakeBone(X + xplus, Y, Length + lenplus, Hspeed, Vspeed, Type, Out, Angle, 0, 0, is_paps, Duration, Follow, Follow_board, Follow_target, Follow_angle, 1);
     }
 }
 function MakeBonesExplosion(X, Y, Bones, Length, Speed, Out, Type, is_paps=0) {
