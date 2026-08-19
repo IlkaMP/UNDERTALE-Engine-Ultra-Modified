@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Battle_Warn",
+  "%Name":"MakeWarn",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Battle_Warn",
+  "name":"MakeWarn",
   "parent":{
     "name":"Bullet",
     "path":"folders/Scripts/Battle/Bullet.yy",

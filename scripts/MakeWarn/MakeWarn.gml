@@ -3,8 +3,8 @@
 ///@arg x2
 ///@arg y2
 ///@arg *warn_time
-function Battle_Warn(){
-	inst = instance_create_depth(0,0,0,battle_obj_warn)
+function MakeWarn(){
+	inst = instance_create_depth(0,0,0,battle_warn)
 	inst.x1 = argument[0]
 	inst.y1 = argument[1]
 	inst.x2 = argument[2]

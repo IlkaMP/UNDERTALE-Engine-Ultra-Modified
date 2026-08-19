@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.086689,
+  "duration":0.086689346,
   "exportDir":"",
   "name":"snd_warn",
   "parent":{
