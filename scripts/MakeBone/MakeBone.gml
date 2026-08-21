@@ -141,6 +141,36 @@ function MakeBoneTop(X = instance_exists(battle_board) ? battle_board.x : 320, L
 
     return bone;
 }
+///@arg vertical,x,y,hspeed,vspeed,type,rotate,gap_pos,gap_size,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*follow_x,*follow_y
+function MakeBoneGap(VERTICAL=0, X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, HSPEED=0, VSPEED=0, TYPE=0, ROTATE=0, GAP_POS=0, GAP_SIZE=20, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, FOLLOW_X=noone, FOLLOW_Y=noone) {
+    var gap = instance_create(bullet_bone_gap)
+	gap.VERTICAL = VERTICAL
+	gap.X=X
+	gap.Y=Y
+	gap.HSPEED=HSPEED
+	gap.VSPEED=VSPEED
+	gap.TYPE=TYPE
+	gap.ROTATE=ROTATE
+	gap.GAP_POS=GAP_POS
+	gap.GAP_SIZE=GAP_SIZE
+	gap.DESTROY=DESTROY
+	gap.PAPS=PAPS
+	gap.DURATION=DURATION
+	gap.FOLLOW=FOLLOW
+	gap.FOLLOW_BOARD=FOLLOW_BOARD
+	gap.FOLLOW_TARGET=FOLLOW_TARGET
+	gap.FOLLOW_ANGLE=FOLLOW_ANGLE
+	gap.FOLLOW_X=FOLLOW_X
+	gap.FOLLOW_Y=FOLLOW_Y
+	if VERTICAL = false{
+	gap.bones[0] = MakeBone(X-battle_board.left, Y, (((X - battle_board.x) + battle_board.left) - GAP_SIZE+GAP_POS), VSPEED, 0, TYPE, 0, DIR.RIGHT, ROTATE, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, true, noone, FOLLOW_X, FOLLOW_Y)
+	gap.bones[1] = MakeBone(X+battle_board.right, Y, (((battle_board.x + battle_board.right) - GAP_SIZE-GAP_POS) - X), VSPEED, 0, TYPE, 0, DIR.LEFT, ROTATE, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, true, noone, FOLLOW_X, FOLLOW_Y)
+	}else{
+	gap.bones[0] = MakeBone(X, Y-battle_board.up, (((Y - battle_board.y) + battle_board.up) - GAP_SIZE + GAP_POS), HSPEED, 0, TYPE, 0, DIR.DOWN, ROTATE, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, true, noone, FOLLOW_X, FOLLOW_Y)
+	gap.bones[1] = MakeBone(X, Y+battle_board.down, (((battle_board.y + battle_board.down) - GAP_SIZE - GAP_POS) - Y), HSPEED, 0, TYPE, 0, DIR.UP, ROTATE, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, true, noone, FOLLOW_X, FOLLOW_Y)
+	}
+	return gap;
+}
 ///@arg x,y,vspeed,type,out,rotate,gap,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
 function MakeBoneTwoH(X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, VSPEED=0, TYPE=0, OUT=0, ROTATE=0,GAP=20, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var bones = [];

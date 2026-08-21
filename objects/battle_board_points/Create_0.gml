@@ -299,7 +299,7 @@ function drawBorder() {
     var vcos = dcos(-angle);
 
     if (battle_board.outline) {
-        var os = battle_board.size_outline;
+        var os = battle_board.outline_size;
 
         for (var ox = -os; ox <= os; ox++) {
             for (var oy = -os; oy <= os; oy++) {
@@ -312,10 +312,10 @@ function drawBorder() {
                     var up = RotateAround(x, y, x + listVertex[| 3][0], y + listVertex[| 3][1], x, y, angle);
                     var down = RotateAround(x, y, x + listVertex[| 2][0], y + listVertex[| 2][1], x, y, angle);
 
-                    draw_sprite_ext(spr_battle_board_edge, global.classic_ui_spr, left[0] + ox, left[1] + oy, 1, 1, angle, battle_board.color_outline, battle_board.alpha_frame);
-                    draw_sprite_ext(spr_battle_board_edge, global.classic_ui_spr, right[0] + ox, right[1] + oy, -1, 1, angle, battle_board.color_outline, battle_board.alpha_frame);
-                    draw_sprite_ext(spr_battle_board_edge, global.classic_ui_spr, up[0] + ox, up[1] + oy, 1, -1, angle, battle_board.color_outline, battle_board.alpha_frame);
-                    draw_sprite_ext(spr_battle_board_edge, global.classic_ui_spr, down[0] + ox, down[1] + oy, -1, -1, angle, battle_board.color_outline, battle_board.alpha_frame);
+                    draw_sprite_ext(spr_battle_board_edge, global.classic_ui_spr, left[0] + ox, left[1] + oy, 1, 1, angle, battle_board.outline_color, battle_board.alpha_frame);
+                    draw_sprite_ext(spr_battle_board_edge, global.classic_ui_spr, right[0] + ox, right[1] + oy, -1, 1, angle, battle_board.outline_color, battle_board.alpha_frame);
+                    draw_sprite_ext(spr_battle_board_edge, global.classic_ui_spr, up[0] + ox, up[1] + oy, 1, -1, angle, battle_board.outline_color, battle_board.alpha_frame);
+                    draw_sprite_ext(spr_battle_board_edge, global.classic_ui_spr, down[0] + ox, down[1] + oy, -1, -1, angle, battle_board.outline_color, battle_board.alpha_frame);
 
                     for (var i = 0; i < ds_list_size(listVertex); i++) {
                         var a = listVertex[| i];
@@ -327,7 +327,7 @@ function drawBorder() {
                         var by = b[0] * vsin + b[1] * vcos;
                         var dir = point_direction(ax, ay, bx, by);
 
-                        draw_sprite_ext(spr_pixel, 0, x + ax + ox - (5 - 4 * battle_board.edge) * cos(degtorad(floor(dir))), y + ay + oy + (5 - 4 * battle_board.edge) * sin(degtorad(floor(dir))), 5, point_distance(ax, ay, bx, by) + 5 + 5 * cos(degtorad(dir % 45)) - 2 * 4 * battle_board.edge, dir + 90, battle_board.color_outline, battle_board.alpha_frame);
+                        draw_sprite_ext(spr_pixel, 0, x + ax + ox - (5 - 4 * battle_board.edge) * cos(degtorad(floor(dir))), y + ay + oy + (5 - 4 * battle_board.edge) * sin(degtorad(floor(dir))), 5, point_distance(ax, ay, bx, by) + 5 + 5 * cos(degtorad(dir % 45)) - 2 * 4 * battle_board.edge, dir + 90, battle_board.outline_color, battle_board.alpha_frame);
                     }
                 } else {
                     var size = ds_list_size(listDivideIndex);
@@ -340,7 +340,7 @@ function drawBorder() {
                             var pos = listVertex_Outline[| di[j]];
                             var resultx = pos[0] * vcos - pos[1] * vsin;
                             var resulty = pos[0] * vsin + pos[1] * vcos;
-                            draw_vertex_color(x + resultx + ox, y + resulty + oy, battle_board.color_outline, battle_board.alpha_frame);
+                            draw_vertex_color(x + resultx + ox, y + resulty + oy, battle_board.outline_color, battle_board.alpha_frame);
                         }
 
                         draw_primitive_end();

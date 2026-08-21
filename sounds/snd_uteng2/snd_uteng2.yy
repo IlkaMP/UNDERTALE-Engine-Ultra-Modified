@@ -7,10 +7,10 @@
   },
   "bitDepth":1,
   "channelFormat":0,
-  "compression":0,
+  "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.8973469,
+  "duration":0.9000227,
   "exportDir":"",
   "name":"snd_uteng2",
   "parent":{

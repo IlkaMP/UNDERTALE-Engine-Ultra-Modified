@@ -1,4 +1,7 @@
 //生成实例
+if world.debug{
+	instance_create(battle_debug)
+}
 instance_create_depth(0,0,0,battle_fader);
 instance_create_depth(0,0,0,battle_board);
 instance_create_depth(0,0,0,battle_ui);

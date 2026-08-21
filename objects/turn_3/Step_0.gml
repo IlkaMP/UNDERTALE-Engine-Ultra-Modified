@@ -24,8 +24,7 @@ if start and dend{
 	}
 	dstart = false
 	if t == 50{
-		var lengthb = 40
-		MakeBoneTwoV(bx, by, 0, 0, 0, 0, 30, 0, 0, 0, true, true)
+		MakeBoneGap(true, bx, by, 0, 0, 0, 0, 0, 30, 0, 0, 0, true, true)
 		plat = Battle_MakePlatform(bx, by, 20, DIR.RIGHT, 0, 0, true, 0)
 		plat.rounded = true
 	}

@@ -18,8 +18,8 @@ color_bg = c_black;
 alpha_bg = 1;
 color_frame = c_white;
 outline = true
-color_outline = c_black
-size_outline = 2
+outline_color = c_black
+outline_size = 2
 
 edge = !global.classic_ui;
 alpha_frame = 1;

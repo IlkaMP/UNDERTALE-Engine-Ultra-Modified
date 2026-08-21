@@ -22,8 +22,8 @@ if (global.kr) {
             else _temp_local_var_1 = 0;
             if _temp_local_var_1 {
                 var z = Storage_SetTempFlag(FLAG_TEMP_GAMEOVER_SOUL_X, x - camera.x);
-				z.Set(FLAG_TEMP_GAMEOVER_SOUL_X, x - camera.x);				
-                z.Set(FLAG_TEMP_GAMEOVER_SOUL_Y, y - camera.y);
+				z.Set(FLAG_TEMP_GAMEOVER_SOUL_X, battle_soul.x - camera.x);				
+                z.Set(FLAG_TEMP_GAMEOVER_SOUL_Y, battle_soul.y - camera.y);
 				room_goto(room_gameover);
 
             }

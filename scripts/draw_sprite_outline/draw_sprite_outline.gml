@@ -1,15 +1,15 @@
-function draw_sprite_outline(arg0, arg1, arg2, arg3, arg4 = 1, arg5 = 1, arg6 = 1, arg7 = 0, arg8 = 0, arg9 = 16777215, arg10 = 1)
+function draw_sprite_outline(sprite, subimg, x, y, xscale = 1, yscale = 1, size_outline = 1, rot = 0, col_outline = 0, col = 16777215, alpha = 1)
 {
-    var i = -arg6;
+    var i = -size_outline;
     
-    while (i <= arg6)
+    while (i <= size_outline)
     {
-        var j = -arg6;
+        var j = -size_outline;
         
-        while (j <= arg6)
+        while (j <= size_outline)
         {
             if (i != 0 || j != 0)
-                draw_sprite_ext(arg0, arg1, arg2 + i, arg3 + j, arg4, arg5, arg7, arg8, arg10);
+                draw_sprite_ext(sprite, subimg, x + i, y + j, xscale, yscale, rot, col_outline, alpha);
             
             j++;
         }
@@ -17,5 +17,5 @@ function draw_sprite_outline(arg0, arg1, arg2, arg3, arg4 = 1, arg5 = 1, arg6 = 
         i++;
     }
     
-    draw_sprite_ext(arg0, arg1, arg2, arg3, arg4, arg5, arg7, arg9, arg10);
+    draw_sprite_ext(sprite, subimg, x, y, xscale, yscale, rot, col, alpha);
 }

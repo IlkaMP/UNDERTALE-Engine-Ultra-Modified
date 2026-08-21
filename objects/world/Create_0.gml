@@ -10,6 +10,8 @@ global.surface_gui = surface_create(640, 480);
 global.controlstype = 0
 global.clearbonewalls = []
 global.deaths = 0
+//if true, will show you debug info in battle\/
+debug = false
 //if true, you'll can control with gamepad\/
 global.gamepad_controls = false
 //if true, game will have gamepad vibration, but it's laggy thing

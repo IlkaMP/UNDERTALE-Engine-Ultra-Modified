@@ -3,24 +3,12 @@
 ///@arg time
 ///@arg delay*
 ///@arg color*
-function Fader_Fade() {
-	var START=argument[0];
-	var TARGET=argument[1];
-	var TIME=argument[2];
-	var DELAY=0;
-	var _COLOR=argument[4]
+function Fader_Fade(START=0, TARGET=1, TIME=20, DELAY=0, _COLOR=c_black) {
 	fader.color = _COLOR
-	if(argument_count>=4){
-		DELAY=argument[3];
-	}
 	if(START==-1){
 		START=fader.alpha;
 	}
-
 	Anim_Destroy(fader,"alpha");
 	Anim_Create(fader,"alpha",0,0,START,TARGET-START,TIME,DELAY);
-
 	return true;
-
-
 }

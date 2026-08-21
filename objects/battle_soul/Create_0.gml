@@ -10,5 +10,5 @@ follow_board = false;
 _inv = 0;
 global.moving = 0;
 outline = false
-if outline
-	sprite_index = spr_battle_soul_outline
+outline_size = 1
+outline_color = c_black

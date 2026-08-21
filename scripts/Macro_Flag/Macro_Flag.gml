@@ -56,7 +56,7 @@ function Macro_Flag() {
 #endregion
 
 #region type
-	enum TYPE {
+	enum BONE_TYPE {
 		WHITE,
 		BLUE,
 		ORANGE,

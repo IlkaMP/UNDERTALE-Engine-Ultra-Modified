@@ -7,7 +7,7 @@ if (Player_GetHp() <= 0) {
   global.restarting = 1
   ini_write_real("Var", "gameovered", global.restarting)
   ini_close()
- room_goto(room_gameover);
+  room_goto(room_gameover);
 }
 var STATE = Battle_GetState();
 if (STATE == BATTLE_STATE.TURN_PREPARATION || STATE == BATTLE_STATE.IN_TURN) {

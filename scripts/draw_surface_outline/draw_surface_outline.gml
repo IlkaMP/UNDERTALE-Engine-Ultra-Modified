@@ -1,15 +1,15 @@
-function draw_surface_outline(arg0, arg1, arg2, arg3 = 0, arg4 = 1, arg5 = 1)
+function draw_surface_outline(id, x, y, col_outline = 0, size_outline = 1, alpha = 1)
 {
-    var i = -arg4;
+    var i = -size_outline;
     
-    while (i <= arg4)
+    while (i <= size_outline)
     {
-        var j = -arg4;
+        var j = -size_outline;
         
-        while (j <= arg4)
+        while (j <= size_outline)
         {
             if (i != 0 || j != 0)
-                draw_surface_ext(arg0, arg1 + i, arg2 + j, 1, 1, 0, arg3, arg5);
+                draw_surface_ext(id, x + i, y + j, 1, 1, 0, col_outline, alpha);
             
             j++;
         }
@@ -17,5 +17,5 @@ function draw_surface_outline(arg0, arg1, arg2, arg3 = 0, arg4 = 1, arg5 = 1)
         i++;
     }
     
-    draw_surface_ext(arg0, arg1, arg2, 1, 1, 0, c_white, arg5);
+    draw_surface_ext(id, x, y, 1, 1, 0, c_white, alpha);
 }

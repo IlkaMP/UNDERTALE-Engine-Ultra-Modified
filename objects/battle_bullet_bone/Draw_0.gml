@@ -1,4 +1,3 @@
-
 image_xscale = (length + 10) / 14;
 if paps == 0{
 if (point = 1) {
@@ -24,4 +23,3 @@ if (point = 1) {
 }
 }
 event_inherited();
-

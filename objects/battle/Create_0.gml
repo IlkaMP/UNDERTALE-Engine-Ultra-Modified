@@ -1,6 +1,3 @@
-global.soulblendover = 0
-global.soulxover = 0
-global.soulyover = 0
 _encounter=Storage_GetTempFlag(FLAG_TEMP_ENCOUNTER);
 _enemy_object[0]=Encounter_GetEnemy(_encounter,0);
 _enemy_object[1]=Encounter_GetEnemy(_encounter,1);

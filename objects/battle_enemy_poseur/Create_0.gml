@@ -1,7 +1,12 @@
 // Inherit the parent event
 event_inherited();
 
-BGM_Play(5, shop_theme);
+//music\/(Use BGM_Follow in step in turn if your attacks going by the music)
+bgm = shop_theme
+if bgm != noone{
+BGM_Play(5, bgm);
+}
+//enemy sets\/
 depth=DEPTH_BATTLE.ENEMY;
 _enemy_slot=-1;
 //enemy start position\/

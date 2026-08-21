@@ -7,10 +7,10 @@
   },
   "bitDepth":1,
   "channelFormat":0,
-  "compression":0,
+  "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.710068,
+  "duration":0.71006805,
   "exportDir":"",
   "name":"snd_break_1",
   "parent":{
