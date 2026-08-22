@@ -1,5 +1,6 @@
-///@arg x,y,length,hspeed,vspeed,type,out,angle,rotate,auto_destroy,is_paps,duration,follow,follow_board,follow_target,follow_angle,point,point_at,follow_x,follow_y
-function MakeBone(X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, LENGTH=20, HSPEED=0, VSPEED=0, TYPE=0, OUT=0, ANGLE=DIR.UP, ROT=0, DESTROY=0, PAPS=0, DURATION=0, OBJ=noone, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
+///@arg x,y,length,hspeed,vspeed,type,out,angle,rotate,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
+///@desk Creates a bone.
+function MakeBone(X, Y, LENGTH, HSPEED=0, VSPEED=0, TYPE=0, OUT=0, ANGLE=DIR.UP, ROT=0, DESTROY=0, PAPS=0, DURATION=0, OBJ=noone, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var bone = instance_create_depth(X, Y, 0, battle_bullet_bone);
     bone.length = LENGTH;
     bone.hspeed = HSPEED;
@@ -43,8 +44,8 @@ function MakeBone(X=instance_exists(battle_board) ? battle_board.x : 320, Y=inst
     }
     return bone;
 }
-///@arg x,y,angle,hspeed,vspeed,rot,length,type,out,auto_destroy,is_paps,*duration,*use_cos,*amplitude,*speed,*offset,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function MakeBoneSin(X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, ANGLE, HSPEED, VSPEED, ROT, LENGTH, TYPE, OUT, DESTROY, PAPS=0, DURATION=-1, USE_COS, AMPLITUDE=20, SPEED=0.1, OFFSET=0, OBJ=noone, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone)
+///@arg x,y,length,angle,hspeed,vspeed,rot,type,out,auto_destroy,is_paps,duration,use_cos,amplitude,speed,offset,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
+function MakeBoneSin(X, Y, LENGTH, ANGLE=DIR.UP, HSPEED=0, VSPEED=0, ROT=0, TYPE=0, OUT=0, DESTROY=0, PAPS=0, DURATION=-1, USE_COS=0, AMPLITUDE=20, SPEED=0.1, OFFSET=0, OBJ=noone, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone)
 {
     var bone = instance_create_depth(X, Y, 0, battle_bullet_bone);
     bone.angle = ANGLE;
@@ -102,8 +103,8 @@ function MakeBoneSin(X=instance_exists(battle_board) ? battle_board.x : 320, Y=i
     }
     return bone;
 }
-///@arg x,length,hspeed,type,out,rotate,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function MakeBoneBottom(X = instance_exists(battle_board) ? battle_board.x : 320, LENGTH = 20, HSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone, FOLLOW_TARGET=noone) {
+/// @arg x,length,hspeed,type,out,rotate,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
+function MakeBoneBottom(X, LENGTH, HSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var Y = (((battle_board.y + battle_board.down) - (LENGTH / 2)) - 5);
     if (POINT == 1) {
         Y = battle_board.y + battle_board.down;
@@ -112,9 +113,9 @@ function MakeBoneBottom(X = instance_exists(battle_board) ? battle_board.x : 320
     return bone;
 }
 ///@arg y,length,vspeed,type,out,rotate,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function MakeBoneLeft(Y = instance_exists(battle_board) ? battle_board.y : 320, LENGTH = 20, HSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone, FOLLOW_TARGET=noone) {
+function MakeBoneLeft(Y, LENGTH, VSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var X = (((battle_board.x - battle_board.left) + (LENGTH / 2)) + 5);
-    if (argument[12] == 1) {
+    if (POINT == 1) {
         X = battle_board.x - battle_board.left;
     }
     var bone = MakeBone(X, Y, LENGTH, 0, VSPEED, COLOR, OUT, 0, ROT, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
@@ -122,9 +123,9 @@ function MakeBoneLeft(Y = instance_exists(battle_board) ? battle_board.y : 320, 
     return bone;
 }
 ///@arg y,length,vspeed,type,out,rotate,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function MakeBoneRight(Y = instance_exists(battle_board) ? battle_board.y : 320, LENGTH = 20, HSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone, FOLLOW_TARGET=noone) {
+function MakeBoneRight(Y, LENGTH, VSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var X = (((battle_board.x + battle_board.right) - (LENGTH / 2)) - 5);
-    if (argument[12] == 1) {
+    if (POINT == 1) {
         X = battle_board.x + battle_board.right;
     }
     var bone = MakeBone(X, Y, LENGTH, 0, VSPEED, COLOR, OUT, 180, ROT, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
@@ -132,9 +133,9 @@ function MakeBoneRight(Y = instance_exists(battle_board) ? battle_board.y : 320,
     return bone;
 }
 ///@arg x,length,hspeed,type,out,rotate,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function MakeBoneTop(X = instance_exists(battle_board) ? battle_board.x : 320, LENGTH = 20, HSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone, FOLLOW_TARGET=noone) {
+function MakeBoneTop(X, LENGTH, HSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var Y = (((battle_board.y - battle_board.up) + (LENGTH / 2)) + 5);
-    if (argument[12] == 1) {
+    if (POINT == 1) {
         Y = battle_board.y - battle_board.up;
     }
     var bone = MakeBone(X, Y, LENGTH, HSPEED, 0, COLOR, OUT, 270, ROT, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD,FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
@@ -172,7 +173,7 @@ function MakeBoneGap(VERTICAL=0, X=instance_exists(battle_board) ? battle_board.
 	return gap;
 }
 ///@arg x,y,vspeed,type,out,rotate,gap,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function MakeBoneTwoH(X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, VSPEED=0, TYPE=0, OUT=0, ROTATE=0,GAP=20, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
+function MakeBoneTwoH(X, Y, VSPEED=0, TYPE=0, OUT=0, ROTATE=0,GAP=20, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var bones = [];
 
     var boneLeft = MakeBoneLeft(Y, (((X - battle_board.x) + battle_board.left) - GAP), VSPEED, TYPE, OUT, ROTATE, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
@@ -183,7 +184,7 @@ function MakeBoneTwoH(X=instance_exists(battle_board) ? battle_board.x : 320, Y=
     return bones;
 }
 ///@arg x,y,hspeed,type,out,rotate,gap,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function MakeBoneTwoV(X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, HSPEED=0, TYPE=0, OUT=0, ROTATE=0,GAP=20, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
+function MakeBoneTwoV(X, Y, HSPEED=0, TYPE=0, OUT=0, ROTATE=0,GAP=20, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var bones = [];
 
     var boneLeft = MakeBoneTop(X, (((Y - battle_board.y) + battle_board.up) - GAP), HSPEED, TYPE, OUT, ROTATE, DESTROY, PAPS, DURATION, FOLLOW, FOLLOW_BOARD, FOLLOW_TARGET, FOLLOW_ANGLE, POINT, POINT_AT, FOLLOW_X, FOLLOW_Y);
@@ -193,7 +194,7 @@ function MakeBoneTwoV(X=instance_exists(battle_board) ? battle_board.x : 320, Y=
     bones[1] = boneRight;
     return bones;
 }
-///@arg number,angle,type,x,y,size_x,size_y,length,out,is_paps,*roting,*rot,*extra_angle,*rotate,*duration,*rott
+///@arg number,angle,type,x,y,size_x,size_y,length,out,is_paps,roting,rot,*extra_angle,*rotate,*duration,*rott
 function MakeBoneCircle(Number, Size, Type, X, Y, H, V, L, Out, PAPS=0, Enable=1, Rot=0, Ex=0, II=0, DURATION=-1, ROTT=0) {
     var bone = instance_create_depth(X, Y, 0, bone_circle);
     bone.number = Number;
@@ -253,8 +254,8 @@ function MakeBone3D() {
 	inst.paps = PAPS;
     return inst;
 }
-///@arg x,y,length,hspeed,vspeed,type,out,angle,rotate,auto_destroy,is_paps,*duration,*scale,*extra_angle,*follow,*follow_board,*follow_angle,*point,*point_at,*follow_x,*follow_y
-function MakeBoneArrow(X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, LENGTH=20, HSPEED=0, VSPEED=0, COLOR=0, OUT=0, ANGLE=DIR.UP, ROT=0, DESTROY=0, PAPS=0, DURATION=0, SCALE=0.5, EXTRA_ANGLE=30, OBJ=0, FOLLOW_BOARD=false, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
+///@arg x,y,length,hspeed,vspeed,type,out,angle,rotate,auto_destroy,is_paps,duration,scale,*extra_angle,*follow,*follow_board,*follow_angle,*point,*point_at,*follow_x,*follow_y
+function MakeBoneArrow(X, Y, LENGTH, HSPEED=0, VSPEED=0, COLOR=0, OUT=0, ANGLE=DIR.UP, ROT=0, DESTROY=0, PAPS=0, DURATION=0, SCALE=0.5, EXTRA_ANGLE=30, OBJ=0, FOLLOW_BOARD=false, FOLLOW_ANGLE=noone, POINT=0, POINT_AT=0, FOLLOW_X=noone, FOLLOW_Y=noone) {
     var bone = instance_create_depth(X, Y, 0, bone_arrow);
     bone.length = LENGTH;
     bone.hspeed = HSPEED;
