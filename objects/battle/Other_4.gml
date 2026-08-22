@@ -1,7 +1,4 @@
 //生成实例
-if world.debug{
-	instance_create(battle_debug)
-}
 instance_create_depth(0,0,0,battle_fader);
 instance_create_depth(0,0,0,battle_board);
 instance_create_depth(0,0,0,battle_ui);
@@ -36,3 +33,6 @@ Battle_SetNextState(BATTLE_STATE.MENU);
 Battle_CallEnemyEvent(BATTLE_ENEMY_EVENT.BATTLE_START);
 
 Battle_GotoNextState();
+if world.debug{
+	instance_create(battle_debug)
+}

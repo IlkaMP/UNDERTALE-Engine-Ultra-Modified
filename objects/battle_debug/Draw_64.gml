@@ -3,16 +3,14 @@ var _game_speed = game_get_speed(gamespeed_fps)
 var current = audio_sound_get_track_position(music_id);
 var total = audio_sound_length(music_id);
     
-// Форматируем минуты и секунды
 var cur_min = floor(current / 60);
 var cur_sec = floor(current % 60);
 var tot_min = floor(total / 60);
 var tot_sec = floor(total % 60);
-    
-// Собираем строку с ведущими нулями
-var cur_str = string(cur_min) + ":" + string_format(cur_sec, 2, 0);
-var tot_str = string(tot_min) + ":" + string_format(tot_sec, 2, 0);
-	
+
+var cur_str = string(cur_min) + ":" + (cur_sec < 10 ? "0" : "") + string(cur_sec);
+var tot_str = string(tot_min) + ":" + (tot_sec < 10 ? "0" : "") + string(tot_sec);
+
 draw_set_colour(c_white)
 draw_set_alpha(0.25);
 draw_rectangle(0, 0, 250, 145, false)
