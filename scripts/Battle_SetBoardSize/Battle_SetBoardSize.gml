@@ -3,6 +3,7 @@
 ///@arg left
 ///@arg right
 ///@arg time*
+///@Desc Sets boards size.
 function Battle_SetBoardSize() {
 	var U=argument[0];
 	var D=argument[1];

@@ -1,0 +1,11 @@
+startdir=DIR.UP
+delay=20
+radius=50
+type=0
+scale=1
+minusdelay=0
+dir=DIR.UP
+plusdir=25
+one_duration=25
+t=0
+endtime = 250

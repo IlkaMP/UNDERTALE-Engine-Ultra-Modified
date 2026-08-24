@@ -29,6 +29,8 @@ knife_damage_time = 45
 toughglove_anim_time = 15
 toughglove_damage_time = 95
 heal_attack = false
+act_attack = false
+mercy_attack = false
 //for survival fights when need to start attack right away
 firstattack = false
 head_sprite = spr_sans_head

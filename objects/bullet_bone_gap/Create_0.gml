@@ -1,6 +1,4 @@
 VERTICAL=false
-X=instance_exists(battle_board) ? battle_board.x : 320
-Y=instance_exists(battle_board) ? battle_board.y : 320
 HSPEED=0
 VSPEED=0
 TYPE=0

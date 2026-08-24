@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"MakeGB",
   "parent":{
-    "name":"Bullet",
-    "path":"folders/Scripts/Battle/Bullet.yy",
+    "name":"blaster",
+    "path":"folders/Scripts/Battle/Bullet/blaster.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

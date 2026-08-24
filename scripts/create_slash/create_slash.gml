@@ -3,7 +3,7 @@
 ///@arg direction
 ///@arg wait
 ///@arg scale
-
+///@desc Creates a slash.
 function create_slash(_x, _y, _dir, _wait, _scale){
 	var inst=instance_create_depth(_x,_y,0,battle_bullet_slash);
 	inst.angle=_dir;

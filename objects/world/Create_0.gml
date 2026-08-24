@@ -19,7 +19,7 @@ global.gamepad_vibration = false
 //if true, centers origin of buttons\/
 global.buttons_centered = true
 //will blue/orange attack react on keyboard or soul moves?\/
-global.attack_keyboard_mode = true
+global.attack_keyboard_mode = false
 firstroom = room_logo
 global.roomaftergameover = room_logo
 //if true, when you press f3 changes fps\/

@@ -13,6 +13,7 @@ function MakeGB(x, y, x_target, y_target, angle_start, angle_target, scale_x, sc
     bb.time_move = time_move;
     return bb;
 }
+///@desc Makes GB round.
 function MakeGBRound(x, y, radius, type){
 	for (var i = 0; i < 360; i += 45)
     {
@@ -22,4 +23,18 @@ function MakeGBRound(x, y, radius, type){
         var yy = y + lengthdir_y(radius, i);
         MakeGB(sx, sy, xx, yy, i - 105, i - 105, 1, 1, type, 2, 30, 0);
     }
+}
+///@desc Makes a circle of Blasters around position with your params.
+function MakeGBCircle(x, y, startdir, delay, one_duration, minusdelay, plusdir, radius, type, scale, endtime){
+	var gb = instance_create_depth(x, y, 0,battle_bullet_gbcircle)
+	gb.startdir = startdir
+	gb.delay = delay
+	gb.one_duration = one_duration
+	gb.minusdelay = minusdelay
+	gb.plusdir = plusdir
+	gb.radius = radius
+	gb.type = type
+	gb.scale = scale
+	gb.endtime = endtime
+	return gb
 }

@@ -143,11 +143,10 @@ function MakeBoneTop(X, LENGTH, HSPEED = 0, COLOR=0, OUT=0, ROT=0, DESTROY=0, PA
     return bone;
 }
 ///@arg vertical,x,y,hspeed,vspeed,type,rotate,gap_pos,gap_size,auto_destroy,is_paps,*duration,*follow,*follow_board,*follow_target,*follow_angle,*follow_x,*follow_y
+///@desc Makes bones with custom gap and changeable params.
 function MakeBoneGap(VERTICAL=0, X=instance_exists(battle_board) ? battle_board.x : 320, Y=instance_exists(battle_board) ? battle_board.y : 320, HSPEED=0, VSPEED=0, TYPE=0, ROTATE=0, GAP_POS=0, GAP_SIZE=20, DESTROY=0, PAPS=0, DURATION=-1, FOLLOW=false, FOLLOW_BOARD=false, FOLLOW_TARGET=noone, FOLLOW_ANGLE=noone, FOLLOW_X=noone, FOLLOW_Y=noone) {
-    var gap = instance_create(bullet_bone_gap)
+    var gap = instance_create_depth(X, Y, 0, bullet_bone_gap)
 	gap.VERTICAL = VERTICAL
-	gap.X=X
-	gap.Y=Y
 	gap.HSPEED=HSPEED
 	gap.VSPEED=VSPEED
 	gap.TYPE=TYPE
