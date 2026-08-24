@@ -1,3 +1,4 @@
+///@desc Sets battle fight menu object.
 function Player_SetBattleFightMenuObj(obj){
 	if(GetObjectBase(obj)!=battle_menu_fight){
 		return false;

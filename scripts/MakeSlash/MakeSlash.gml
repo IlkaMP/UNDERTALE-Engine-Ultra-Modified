@@ -4,6 +4,7 @@
 ///@arg color
 ///@arg *ghost
 ///@arg *spam
+///@desc Creates a slash.
 function MakeSlash(){
     var X = argument[0];
     var Y = argument[1];

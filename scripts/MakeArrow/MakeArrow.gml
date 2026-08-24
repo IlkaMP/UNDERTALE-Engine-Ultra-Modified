@@ -5,7 +5,7 @@
 ///@arg assist 最もソウルに近い際に色が変わるか（盾が一つの場合のみ）
 ///@arg mode trueで黄色になる
 ///@arg follow_soul ソウルに追従するか
-///@desc アンダインの槍を作成します。
+///@desc Makes Undyne arrow for green soul shield.
 function MakeArrow(_dir,_speed=4,_distance=320,_target_shield=[0],_assist=true,_mode=0,_follow_soul=true){
 	var arrow = instance_create_depth(0,0,0,battle_bullet_arrow)
 	with(arrow) {

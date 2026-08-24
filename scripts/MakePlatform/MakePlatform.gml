@@ -1,3 +1,4 @@
+///@Desc Creates a platform for blue soul.
 function Battle_MakePlatform(x, y, width, angle, hspeed, vspeed, sticky = 0, bounce = 0, duration = -1, auto_destroy = 1) {
     var a = instance_create_depth(x, y, 0, battle_platform);
     a.sticky = sticky;

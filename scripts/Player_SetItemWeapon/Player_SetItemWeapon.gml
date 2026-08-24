@@ -1,3 +1,4 @@
+///@desc Sets players weapon.
 function Player_SetItemWeapon(item) {
 	var itemTypes=Item_GetTypeManager();
 	if(!itemTypes.IsEmptyOrValid(item)){

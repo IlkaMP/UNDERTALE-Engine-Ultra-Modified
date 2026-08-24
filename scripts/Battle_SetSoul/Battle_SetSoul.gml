@@ -1,6 +1,7 @@
 ///@arg soul_obj
 ///@arg *sound
 ///@arg *effect
+///@Desc Sets soul to your custom object.
 function Battle_SetSoul(SOUL,SND=false,EFFECT=false) {
     if (Battle_IsSoulValid(SOUL) && object_exists(SOUL)) {
         var X = 0;

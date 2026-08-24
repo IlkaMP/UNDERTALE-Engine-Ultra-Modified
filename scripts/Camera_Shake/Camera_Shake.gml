@@ -1,3 +1,4 @@
+///@desc Shakes the camera.
 function Camera_Shake(shake_x, shake_y, shake_speed_x = 0, shake_speed_y = 0, shake_random_x = 0, shake_random_y = 0, shake_decrease_x = 1, shake_decrease_y = 1, blur = !global.classic_ui) {
 
     var X = shake_x;

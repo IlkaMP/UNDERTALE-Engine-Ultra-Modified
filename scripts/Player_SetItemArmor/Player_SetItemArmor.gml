@@ -1,3 +1,4 @@
+///@desc Sets players armor.
 function Player_SetItemArmor(item) {
 	var itemTypes=Item_GetTypeManager();
 	if(!itemTypes.IsEmptyOrValid(item)){

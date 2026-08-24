@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"MakeUndyneSpear",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Bullet",
+    "path":"folders/Scripts/Battle/Bullet.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

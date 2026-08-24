@@ -1,11 +1,12 @@
-/// @desc Player initial script, don't forget to check objects "world" and enemy object to set other inits
+/// @desc Player initial script, don't forget to check objects "world" and enemy object to set other inits.
 function Player_CustomInitialData(){
 	//player name\/
 	Player_SetName("PLAYER");
 	//player lv\/
 	Player_SetLv(1);
-	// you can choose this method to set HP automatically by level or just set hp by yourself\/
-    Player_SetHpMax(20 + (Player_GetLv() - 1) * 4)
+	//you can choose this method to set HP automatically by level or just set hp by yourself\/
+    Player_SetHpMax(20 + (Player_GetLv() - 1) * 4) // Or use Player_GetLvHpMax(LV)
+	//here you just sets your current hp value=\/
 	Player_SetHp(Player_GetHpMax())
 	//Player_SetHpMax(20);
 	//Player_SetHp(20);

@@ -1,5 +1,5 @@
 ///@arg anim_target アニメーションを再生する敵
-///@desc ソウルを上に叩きつけます。
+///@desc Slams soul with enemy anim and direcrion.
 function SlamUp(anim_target=battle_enemy){
 var TARGET = anim_target
 Battle_SetSoul(battle_soul_blue)

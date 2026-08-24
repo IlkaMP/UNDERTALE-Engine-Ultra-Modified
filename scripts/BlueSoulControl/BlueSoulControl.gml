@@ -1,3 +1,4 @@
+///@Desc Slams soul with your speed.
 function BlueSoulControl(dir, impact_speed = 10) {
     Battle_SetSoul(battle_soul_blue);
     battle_soul.impact = 1;

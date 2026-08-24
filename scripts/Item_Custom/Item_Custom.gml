@@ -61,10 +61,11 @@ function Item_Custom(){
 		inventories.Register("box2",new Inventory(itemTypes,10));
 	}
 }
-
+///@desc Gets inventory items.
 function Item_GetInventoryItems(){
 	return Item_GetInventoryManager().Get("items");
 }
+///@desc Gets inventory phones.
 function Item_GetInventoryPhones(){
 	return Item_GetInventoryManager().Get("phones");
 }

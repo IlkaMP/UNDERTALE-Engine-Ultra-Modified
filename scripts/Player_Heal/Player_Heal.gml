@@ -1,3 +1,4 @@
+///@desc Heals player.
 function Player_Heal(heal) {
 	if(heal<0){
 		return Player_Hurt(-heal);

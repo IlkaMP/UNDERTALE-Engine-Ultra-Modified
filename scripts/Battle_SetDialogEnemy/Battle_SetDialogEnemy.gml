@@ -2,7 +2,7 @@
 ///@arg y
 ///@arg {string} text セリフ
 ///@arg template 吹き出しのテンプレート
-///@desc 敵のセリフを作成します。
+///@desc Sets enemy dialogue.
 function Battle_SetDialogEnemy(_x,_y,_text,_template=0){
 	var txt = instance_create_depth(_x,_y,0,battle_dialog_enemy)
 	txt.text = _text

@@ -1,12 +1,9 @@
 ///@arg lv
-function Player_GetLvDef() {
-	var LV=argument[0];
-
+///@desc Special function to get def by level.
+function Player_GetLvDef(LV) {
 	var result=-1;
 
 	result=10+ceil((LV-4)/4);
 
 	return result;
-
-
 }

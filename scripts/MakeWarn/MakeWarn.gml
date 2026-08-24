@@ -3,6 +3,7 @@
 ///@arg x2
 ///@arg y2
 ///@arg *warn_time
+///@Desc Creates a warn about attack.
 function MakeWarn(){
 	inst = instance_create_depth(0,0,0,battle_warn)
 	inst.x1 = argument[0]

@@ -1,6 +1,6 @@
 ///@arg {real} dir 叩きつける向き。90の倍数しか指定できない。
 ///@arg anim_target アニメーションを再生する敵
-///@desc ソウルを指定した方向へ叩きつけます。
+///@desc Slams soul with enemy anim and direcrion.
 function Slam(dir,anim_target=battle_enemy){
 	dir%=360
 	if dir == DIR.DOWN {

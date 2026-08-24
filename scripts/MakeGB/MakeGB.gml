@@ -1,3 +1,4 @@
+///@Desc Creates a gaster blaster.
 function MakeGB(x, y, x_target, y_target, angle_start, angle_target, scale_x, scale_y, type, pause=25, duration=35, time_move=25) {
     var bb = instance_create_depth(x, y, DEPTH_BATTLE.BULLET_OUTSIDE_HIGH, battle_bullet_gb);    
     bb.x_target = x_target;

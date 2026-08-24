@@ -1,7 +1,6 @@
 ///@arg lv
-function Player_GetLvExp() {
-	var LV=argument[0];
-
+///@desc Special function to get exp by level.
+function Player_GetLvExp(LV) {
 	var result=-1;
 
 	switch(LV){
