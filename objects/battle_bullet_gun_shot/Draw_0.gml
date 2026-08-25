@@ -1,11 +1,8 @@
-surface_set_target(Battle_GetBoardSurface());{
-	draw_self();
-}surface_reset_target();
-
-/*
+draw_self();
+if lineaim{
 draw_line(x-room_width,y,x+room_width,y)
 draw_line(x,y+room_height,x,y-room_height)
-*/
+}
 
 if(type==0) {
 draw_line(x-show_pause*10,y,x+show_pause*10,y)

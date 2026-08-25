@@ -141,7 +141,7 @@
     {"name":"border","order":5,"path":"objects/border/border.yy",},
     {"name":"bullet_bone_gap","order":8,"path":"objects/bullet_bone_gap/bullet_bone_gap.yy",},
     {"name":"bullet_bone_wavenew","order":6,"path":"objects/bullet_bone_wavenew/bullet_bone_wavenew.yy",},
-    {"name":"bullet_bone","order":11,"path":"objects/bullet_bone/bullet_bone.yy",},
+    {"name":"bullet_bone","order":9,"path":"objects/bullet_bone/bullet_bone.yy",},
     {"name":"camera","order":7,"path":"objects/camera/camera.yy",},
     {"name":"char_box","order":1,"path":"objects/char_box/char_box.yy",},
     {"name":"char_sans","order":4,"path":"objects/char_sans/char_sans.yy",},

@@ -19,7 +19,7 @@ if t = 1{
 	Fader_Fade(0, 1, 50, 0, c_red)
 }
 if t == 50{
-	MakeGun(bsx, bsy, 1, 1, 0, 10)
+	MakeGun(bsx, bsy, 1, 1, 2, 100)
 	Fader_Fade(1, 0, 10, 0, c_red)
 	MakeSlash(bx, by, DIR.UP-45, 0)
 	paps = MakeBone(bx, by, 65, 0, 0, BONE_TYPE.ORANGE, 0, 0, 10, 0, 1, 0, noone, noone, noone, noone, 1)

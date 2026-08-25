@@ -12,8 +12,8 @@
   "name":"bullet_bone",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullet",
-    "path":"folders/Objects/Battle/Bullet.yy",
+    "name":"Bone",
+    "path":"folders/Objects/Battle/Bullet/Bone.yy",
   },
   "parentObjectId":{
     "name":"battle_bullet",
