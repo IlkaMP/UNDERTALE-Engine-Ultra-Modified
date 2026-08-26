@@ -102,6 +102,7 @@
     {"name":"font_determination_sans","order":5,"path":"fonts/font_determination_sans/font_determination_sans.yy",},
     {"name":"font_papyrus","order":6,"path":"fonts/font_papyrus/font_papyrus.yy",},
     {"name":"font_sans_rus","order":2,"path":"fonts/font_sans_rus/font_sans_rus.yy",},
+    {"name":"barrier_ver3","order":8,"path":"objects/barrier_ver3/barrier_ver3.yy",},
     {"name":"battle_bg","order":9,"path":"objects/battle_bg/battle_bg.yy",},
     {"name":"battle_bullet_arrow_1","order":1,"path":"objects/battle_bullet_arrow_1/battle_bullet_arrow_1.yy",},
     {"name":"battle_bullet_arrow","order":13,"path":"objects/battle_bullet_arrow/battle_bullet_arrow.yy",},

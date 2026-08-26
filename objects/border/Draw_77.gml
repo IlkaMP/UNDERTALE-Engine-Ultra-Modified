@@ -40,7 +40,7 @@ if (_enabled) {
         draw_set_alpha(1);
         draw_surface(application_surface, 0, 0);
         surface_reset_target();
-		if global.blur = true or global.blur = 1{
+		if global.blur{
                 _kawase.Blur(round(global.blur_amount));
 		}
         draw_set_color(c_white);
@@ -60,7 +60,7 @@ if (_enabled) {
         draw_set_alpha(1);
         draw_surface(application_surface, 0, 0);
         surface_reset_target();
-			if global.blur = true or global.blur = 1{
+			if global.blur{
                 _kawase.Blur(round(global.blur_amount));
 			}
         draw_set_color(c_white);

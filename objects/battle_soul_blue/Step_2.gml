@@ -117,9 +117,7 @@ if (STATE == BATTLE_STATE.TURN_PREPARATION || STATE == BATTLE_STATE.IN_TURN) {
             move = 0;
             if (impact = 1) {
                 audio_play_sound(snd_dong, 0, 0);
-				if global.shaking{
                 Camera_Shake(8, 8, 1, 1, 1, 1);
-				}
                 impact = 0;
             }
         }
@@ -129,9 +127,7 @@ if (STATE == BATTLE_STATE.TURN_PREPARATION || STATE == BATTLE_STATE.IN_TURN) {
             move = 1;
             if (impact = 1) {
                 audio_play_sound(snd_dong, 0, 0);
-				if global.shaking{
                 Camera_Shake(8, 8, 1, 1, 1, 1);
-				}
                 impact = 0;
             }
         }
@@ -142,9 +138,7 @@ if (STATE == BATTLE_STATE.TURN_PREPARATION || STATE == BATTLE_STATE.IN_TURN) {
             move = 0;
             if (impact = 1) {
                 audio_play_sound(snd_dong, 0, 0);
-				if global.shaking{
                 Camera_Shake(8, 8, 1, 1, 1, 1);
-				}
                 impact = 0;
             }
         }

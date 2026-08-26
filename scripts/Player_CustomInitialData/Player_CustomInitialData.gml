@@ -44,9 +44,9 @@ function Player_CustomInitialData(){
 	//if enabled, makes all of the bones Papyrused\/
     global.papsbones = false
     //set false to disable blur\/
-    global.blur = true
+    global.blur = false
 	//shaking on souls slams and other...\/
-	global.shaking = false
+	global.shaking = true
 	//if enabled item system will be just like in undertale\/
 	global.vanilla_items = false
     //classic ui from undertale or new?\/

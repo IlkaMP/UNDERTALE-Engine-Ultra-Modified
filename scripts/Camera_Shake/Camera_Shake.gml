@@ -1,6 +1,6 @@
 ///@desc Shakes the camera.
 function Camera_Shake(shake_x, shake_y, shake_speed_x = 0, shake_speed_y = 0, shake_random_x = 0, shake_random_y = 0, shake_decrease_x = 1, shake_decrease_y = 1, blur = !global.classic_ui) {
-
+	if global.shaking{
     var X = shake_x;
     var Y = shake_y;
     var SPEED_X = shake_speed_x;
@@ -25,5 +25,8 @@ function Camera_Shake(shake_x, shake_y, shake_speed_x = 0, shake_speed_y = 0, sh
     camera._shake_positive_y = true;
     if (blur) Anim_Create(global, "blur_amount", 0, 0, 2, -2, 20);
     return true;
+	} else{
+	return false;
+	}
 
 }
