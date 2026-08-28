@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"MakeBeam",
+  "%Name":"MakeSlashDt",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"MakeBeam",
+  "name":"MakeSlashDt",
   "parent":{
     "name":"Bullet",
     "path":"folders/Scripts/Battle/Bullet.yy",

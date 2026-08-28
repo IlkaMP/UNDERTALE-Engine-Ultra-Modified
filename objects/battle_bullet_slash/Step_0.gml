@@ -1,25 +1,15 @@
-/// @description Override, don't delete
-time++
-if joutai==2{
-x=600
-y=600
+// Inherit the parent event
+event_inherited();
+t++
+if (image_alpha <= 0){
+    instance_destroy();
 }
-if time=wait{
-Camera_Shake(15,15,1,1,1,1);
-audio_play_sound(ban,10,false)
-image_alpha=0
+if t = pause + 1{
+	audio_play_sound(ban, 0, 0, 0.5);
+	hit = true
+	Anim_Create(self, "image_yscale", 0, 0, 0, 16, 10);
 }
-if time = wait{
-	slashobj = instance_create_depth(xstart, ystart, 0, obj_slash)
-    slashobj.image_yscale = slashwidth
-	slashobj.angle = image_angle
-}
-if time>wait{
-slashobj.image_alpha-=0.03
-slashobj.image_yscale += 0.008
-if slashobj.image_alpha <= 0{
-	instance_destroy()
-	instance_destroy(slashobj)
-}
-
+if t = pause + 21{
+	Anim_Create(self, "image_alpha", 0, 0, 1, -1, 10);
+	Anim_Create(self, "image_yscale", 0, 0, 16, -16, 10);
 }

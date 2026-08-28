@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"create_slash",
+  "%Name":"MakeSlashKnife",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"create_slash",
+  "name":"MakeSlashKnife",
   "parent":{
     "name":"Bullet",
     "path":"folders/Scripts/Battle/Bullet.yy",

@@ -6,7 +6,7 @@ audio_stop_sound(ban);
 audio_play_sound(ban, 0, 0);
 Camera_Shake(6, 6, 2, 2, 1, 1)
 if instance_exists(obj_rgb){
-	if color == 3{
+	if type == 3{
 		obj_rgb.fd = 16
 	}
 }

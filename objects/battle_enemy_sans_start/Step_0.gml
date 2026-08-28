@@ -3,7 +3,7 @@ if t == 50{
 	b = BulBone(bx, by+bup, 20, 0, 0, DIR.UP, 0, 0, 0, 0, 0, true, true)
 }
 if t%30=0{
-	MakeBeam(bsx, bsy, irandom_range(0, 360), 25, true)
+	MakeSlash(bsx, bsy, irandom_range(0, 360), 25, true)
 }
 battle_board.angle -= 1
 }

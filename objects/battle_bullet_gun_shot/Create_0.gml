@@ -16,6 +16,4 @@ Anim_Create(self,"image_alpha",0,0,0,1,10)
 //Anim_Create(self,"image_yscale",0,0,0,ysc,10)
 _draw=false
 t=0
-
-depth=out ? DEPTH_BATTLE.BULLET_OUTSIDE_HIGH : DEPTH_BATTLE.BULLET;
 dmg=1
