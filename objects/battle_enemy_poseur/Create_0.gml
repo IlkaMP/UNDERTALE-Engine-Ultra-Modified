@@ -35,3 +35,4 @@ mercy_attack = false
 firstattack = false
 xdialogue = xpos+90
 ydialogue = 80
+battle_turn_system = BATTLE_TURNS.CUSTOM;

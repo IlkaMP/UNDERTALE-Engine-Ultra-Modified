@@ -1,4 +1,15 @@
-draw_self();
+if(out = 0){
+	depth = DEPTH_BATTLE.BULLET;
+	if instance_exists(battle_board){
+	surface_set_target(Battle_GetBoardSurface());{
+		draw_self();
+	}surface_reset_target();
+	}
+}
+else{
+	depth = DEPTH_BATTLE.BULLET_OUTSIDE_LOW;
+	draw_self()
+}
 if lineaim{
 draw_line(x-room_width,y,x+room_width,y)
 draw_line(x,y+room_height,x,y-room_height)

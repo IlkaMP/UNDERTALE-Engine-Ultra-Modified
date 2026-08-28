@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"MakeBeam",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MakeBeam",
+  "parent":{
+    "name":"Bullet",
+    "path":"folders/Scripts/Battle/Bullet.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

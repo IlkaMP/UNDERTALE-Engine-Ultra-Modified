@@ -60,3 +60,4 @@ eye_flash = false
 mode = 1
 xdialogue = xpos+90
 ydialogue = ypos-100
+battle_turn_system = BATTLE_TURNS.CUSTOM;

@@ -1,16 +1,33 @@
-///@arg x1
-///@arg y1
-///@arg x2
-///@arg y2
-///@arg *warn_time
 ///@Desc Creates a warn about attack.
-function MakeWarn(){
-	inst = instance_create_depth(0,0,0,battle_warn)
-	inst.x1 = argument[0]
-	inst.y1 = argument[1]
-	inst.x2 = argument[2]
-	inst.y2 = argument[3]
-	inst.w_time = (argument_count>4 ? argument[4] : 30)
+function MakeWarn(x, y, w, h, angle, w_time = 30, out=true){
+	audio_play_sound(snd_bonewarn,50,false)
+	var inst = instance_create_depth(x,y,0,battle_warn)
+	inst.w = w
+	inst.h = h
+	inst.image_angle = angle
+	inst.out = out
+	inst.w_time = w_time
+	inst.warntype = 0
+	
+	return inst
+}
+function MakeWarnLine(x, y, angle, w_time = 30, out = true){
+	audio_play_sound(snd_bonewarn,50,false)
+	var inst = instance_create_depth(x,y,0,battle_warn)
+	inst.image_angle = angle
+	inst.out = out
+	inst.w_time = w_time
+	inst.warntype = 1
+	
+	return inst
+}
+function MakeWarnRound(x, y, rad, w_time = 30, out = true){
+	audio_play_sound(snd_bonewarn,50,false)
+	var inst = instance_create_depth(x,y,0,battle_warn)
+	inst.rad = rad
+	inst.out = out
+	inst.w_time = w_time
+	inst.warntype = 2
 	
 	return inst
 }

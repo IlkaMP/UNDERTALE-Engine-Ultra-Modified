@@ -54,7 +54,12 @@ function Macro_Flag() {
 #macro FLAG_TEMP_SHOP_ROOM_RETURN "shop_room_return"
 #macro FLAG_TEMP_SHOP "shop"
 #endregion
-
+#region turn system
+	enum BATTLE_TURNS{
+		AUTO,
+		CUSTOM
+	}
+#endregion
 #region type
 	enum BONE_TYPE {
 		WHITE,

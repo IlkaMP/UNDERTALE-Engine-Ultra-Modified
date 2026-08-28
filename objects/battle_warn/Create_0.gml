@@ -1,11 +1,11 @@
+event_inherited()
 w_time = 30;
-x1 = 0;
-y1 = 0;
-x2 = 0;
-y2 = 0;
-//x3 = noone;
-//y3 = noone;
-//x4 = noone;
-//y4 = noone;
 wtimer = 0;
 colour = c_red;
+out = true;
+warntype = 0
+type = 0
+rad = 20
+w = 20
+h = 20
+image_xscale = 999;
