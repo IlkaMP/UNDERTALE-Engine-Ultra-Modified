@@ -18,6 +18,6 @@ repeat(Warning.bonecount){
 	}
 }
 audio_play_sound(snd_kaboom,0,false)
-audio_stop_sound(warn)
+audio_stop_sound(snd_exclamation)
 Camera_Shake(-5,5)
 timer_Des=0
