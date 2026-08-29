@@ -27,7 +27,7 @@
   "origin":9,
   "parent":{
     "name":"Bone Expolde",
-    "path":"folders/Objects/Battle/Bullet/Bone Expolde.yy",
+    "path":"folders/Sprites/Battle/Bullet/Bone Expolde.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"kaboom",
+  "%Name":"snd_kaboom",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.208889,
+  "duration":1.2088889,
   "exportDir":"",
-  "name":"kaboom",
+  "name":"snd_kaboom",
   "parent":{
     "name":"Bone Expolde",
-    "path":"folders/Objects/Battle/Bullet/Bone Expolde.yy",
+    "path":"folders/Sounds/Bullet/Bone Expolde.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"kaboom.wav",
+  "soundFile":"snd_kaboom.wav",
   "volume":1.0,
 }

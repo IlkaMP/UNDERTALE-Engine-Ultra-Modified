@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":3,
   "parent":{
-    "name":"Bone",
-    "path":"folders/Objects/Battle/Bullet/Bone.yy",
+    "name":"BoneBul",
+    "path":"folders/Sprites/Battle/Bullet/Bone/BoneBul.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

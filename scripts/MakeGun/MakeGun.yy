@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"MakeGun",
   "parent":{
-    "name":"gun",
-    "path":"folders/Objects/Battle/Bullet/gun.yy",
+    "name":"Gun",
+    "path":"folders/Scripts/Battle/Bullet/Gun.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

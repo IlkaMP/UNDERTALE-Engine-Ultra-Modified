@@ -1,3 +1,4 @@
+///@desc Soul Collision
 if(can_hit) {
 if !global.kr
 	Battle_CallSoulEventHurt()

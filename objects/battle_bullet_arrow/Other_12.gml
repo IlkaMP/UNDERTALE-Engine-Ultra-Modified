@@ -1,3 +1,4 @@
+///@desc Bullet Draw
 if auto_mix {
 	var Col = battle_soul_green.shield_color[target_shield[0],0]
 	for(var i=1;i<array_length(target_shield);i++) {

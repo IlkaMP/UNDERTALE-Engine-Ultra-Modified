@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"gun",
-    "path":"folders/Objects/Battle/Bullet/gun.yy",
+    "name":"Gun",
+    "path":"folders/Sprites/Battle/Bullet/Gun.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

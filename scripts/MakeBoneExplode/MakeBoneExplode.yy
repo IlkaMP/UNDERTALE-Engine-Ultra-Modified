@@ -6,7 +6,7 @@
   "name":"MakeBoneExplode",
   "parent":{
     "name":"Bone Expolde",
-    "path":"folders/Objects/Battle/Bullet/Bone Expolde.yy",
+    "path":"folders/Scripts/Battle/Bullet/Bone Expolde.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

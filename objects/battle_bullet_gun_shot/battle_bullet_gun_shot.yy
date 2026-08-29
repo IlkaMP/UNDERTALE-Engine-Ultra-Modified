@@ -12,8 +12,8 @@
   "name":"battle_bullet_gun_shot",
   "overriddenProperties":[],
   "parent":{
-    "name":"gun",
-    "path":"folders/Objects/Battle/Bullet/gun.yy",
+    "name":"Gun",
+    "path":"folders/Objects/Battle/Bullet/Gun.yy",
   },
   "parentObjectId":{
     "name":"battle_bullet",

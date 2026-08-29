@@ -1,3 +1,4 @@
+///@desc Soul Collision
 switch (type) {
     case 0:
 	    if !global.kr

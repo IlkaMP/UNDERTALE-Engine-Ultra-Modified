@@ -1,3 +1,4 @@
+///@desc Soul Collision
 if (type == 0) && image_alpha >= 0.4{
 	if (place_meeting(x, y, battle_soul)) {
 		Player_HurtKr();

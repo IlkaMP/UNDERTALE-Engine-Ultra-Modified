@@ -1,3 +1,4 @@
+///@desc Soul Collision
 if global.kr{
 	if dmg != 0{
 	Player_HurtKr()

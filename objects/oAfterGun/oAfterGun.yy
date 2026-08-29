@@ -9,8 +9,8 @@
   "name":"oAfterGun",
   "overriddenProperties":[],
   "parent":{
-    "name":"gun",
-    "path":"folders/Objects/Battle/Bullet/gun.yy",
+    "name":"Gun",
+    "path":"folders/Objects/Battle/Bullet/Gun.yy",
   },
   "parentObjectId":null,
   "persistent":false,

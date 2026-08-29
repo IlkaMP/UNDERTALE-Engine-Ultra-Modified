@@ -17,7 +17,7 @@ repeat(Warning.bonecount){
 		direction=random(360);
 	}
 }
-audio_play_sound(kaboom,0,false)
+audio_play_sound(snd_kaboom,0,false)
 audio_stop_sound(warn)
 Camera_Shake(-5,5)
 timer_Des=0
