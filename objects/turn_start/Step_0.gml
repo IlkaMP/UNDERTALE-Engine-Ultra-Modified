@@ -23,7 +23,7 @@ if t == 50{
 	Fader_Fade(1, 0, 10, 0, c_red)
 	MakeSlashDt(bx, by, DIR.UP-45, 0)
 	paps = MakeBone(bx, by, 65, 0, 0, BONE_TYPE.ORANGE, 0, 0, 10, 0, 1, 0, noone, noone, noone, noone, 1)
-	MakeGB(0, 0, bx - 200, by, 0, DIR.RIGHT, 2, 2, 0)
+	MakeGB(0, by, DIR.RIGHT, 2, 2, bx-200, by, DIR.RIGHT)
 }
 if t == 250{
 	Battle_EndTurn()

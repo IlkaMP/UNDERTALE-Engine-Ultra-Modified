@@ -1,5 +1,5 @@
 ///@Desc Creates a warn about attack.
-function MakeWarn(x, y, w, h, angle, w_time = 30, out=true){
+function MakeWarnRect(x, y, w, h, angle, w_time = 30, out=true){
 	audio_play_sound(snd_bonewarn,50,false)
 	var inst = instance_create_depth(x,y,0,battle_warn)
 	inst.w = w
@@ -11,6 +11,7 @@ function MakeWarn(x, y, w, h, angle, w_time = 30, out=true){
 	
 	return inst
 }
+///@Desc Creates a warn about attack.
 function MakeWarnLine(x, y, angle, w_time = 30, out = true){
 	audio_play_sound(snd_bonewarn,50,false)
 	var inst = instance_create_depth(x,y,0,battle_warn)
@@ -21,6 +22,7 @@ function MakeWarnLine(x, y, angle, w_time = 30, out = true){
 	
 	return inst
 }
+///@Desc Creates a warn about attack.
 function MakeWarnRound(x, y, rad, w_time = 30, out = true){
 	audio_play_sound(snd_bonewarn,50,false)
 	var inst = instance_create_depth(x,y,0,battle_warn)

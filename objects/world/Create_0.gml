@@ -1,7 +1,6 @@
 _time = 0;
 _frame_skip = 0;
 _frame_skipped = 0;
-global.blur_amount = 0;
 global.classic_ui = 0;
 global.classic_ui_spr = 0;
 global.Panel = battle_menu_fight_knife;
@@ -18,7 +17,7 @@ global.gamepad_controls = false
 global.gamepad_vibration = false
 //if true, centers origin of buttons\/
 global.buttons_centered = true
-//will blue/orange attack react on keyboard or soul moves?\/
+//will blue/orange attack react on soul moves or keyboard?\/
 global.attack_keyboard_mode = false
 firstroom = room_logo
 global.roomaftergameover = room_logo

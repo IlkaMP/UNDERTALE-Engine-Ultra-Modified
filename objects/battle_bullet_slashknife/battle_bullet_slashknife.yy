@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"slash",
-    "path":"sprites/slash/slash.yy",
+    "name":"spr_slash_knife",
+    "path":"sprites/spr_slash_knife/spr_slash_knife.yy",
   },
   "spriteMaskId":null,
   "visible":true,

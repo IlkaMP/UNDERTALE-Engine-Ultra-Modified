@@ -62,6 +62,7 @@ function Battle_SetState() {
 		var SIZE_SPEED=Battle_GetTurnInfo(BATTLE_TURN.BOARD_SIZE_SPEED,10);
 		var SIZE_DURATION=Battle_GetTurnInfo(BATTLE_TURN.BOARD_SIZE_DURATION,30);
 	
+	if global.turn_animboard{
 		if(MOVE_MODE==BATTLE_TURN_BOARD_TRANSFORM_MODE.SPEED){
 			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,round(abs(X_CHANGE/MOVE_SPEED)));
 			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,round(abs(Y_CHANGE/MOVE_SPEED)));
@@ -80,6 +81,14 @@ function Battle_SetState() {
 			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,SIZE_DURATION);
 			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,SIZE_DURATION);
 		}
+	} else{
+		battle_board.x = X_OLD + X_CHANGE
+		battle_board.y = Y_OLD + Y_CHANGE
+		battle_board.top = UP_OLD + UP_CHANGE
+		battle_board.bottom = DOWN_OLD + DOWN_CHANGE
+		battle_board.left = LEFT_OLD + LEFT_CHANGE
+		battle_board.right = RIGHT_OLD + RIGHT_CHANGE
+	}
 	}
 
 	//回合内

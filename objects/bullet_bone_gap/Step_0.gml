@@ -7,7 +7,7 @@ if !VERTICAL{
 	}
 }else{
 	if (is_array(bones)) {
-	if instance_exists(bones[0]){
+	if instance_exists(bones[1]){
 	bones[0].length = (((y - battle_board.y) + battle_board.up) - GAP_SIZE + GAP_POS)
     bones[1].length = (((battle_board.y + battle_board.down) - GAP_SIZE - GAP_POS) - y)
 	}

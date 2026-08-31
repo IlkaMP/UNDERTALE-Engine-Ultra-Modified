@@ -1,1 +1,1 @@
-music_id = global._bgm_id[5]
+music_id = BGM_GetID(5)

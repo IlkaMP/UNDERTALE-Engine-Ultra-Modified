@@ -6,8 +6,8 @@ if t%30=0{
 	MakeSlash(bsx, bsy, irandom_range(0, 360), 0, 25, true)
 }
 battle_board.angle -= 1
-}
 if t = 750{
 	battle_board.angle = 0
 	Battle_EndTurn()
+}
 }

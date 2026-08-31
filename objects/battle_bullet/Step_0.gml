@@ -1,6 +1,6 @@
-if variable_instance_exists(self, "hit_destroy"){
-	if (place_meeting(x, y, battle_soul) and hit) {
+if (place_meeting(x, y, battle_soul) and hit) {
 	    Battle_CallSoulEventBulletCollision();
+		if variable_instance_exists(self, "hit_destroy"){
 		if hit_destroy {
 			instance_destroy()
 		}

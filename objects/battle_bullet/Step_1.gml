@@ -1,5 +1,4 @@
 if (!processed) {
-    alarm[0] = duration;
     if (follow) {
         direction = 0;
         speed = 0;

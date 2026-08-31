@@ -45,6 +45,8 @@ function Player_CustomInitialData(){
     global.papsbones = false
     //set false to disable blur\/
     global.blur = false
+	//amount of blur\/
+	global.blur_amount = 0;
 	//shaking on souls slams and other...\/
 	global.shaking = true
 	//if enabled item system will be just like in undertale\/
@@ -52,7 +54,11 @@ function Player_CustomInitialData(){
     //classic ui from undertale or new?\/
     global.classic_ui = false
     global.classic_ui_spr = false
-    //Set this var to false/0 to disable kr\/
+    //set this var to false/0 to disable kr\/
     global.kr = true
+	//battle_board settings on start\/
+	global.turn_animboard = true //it's will animate board at the start of every turn if true
+	global.start_boardsize = [/*up*/65,/*down*/65,/*left*/283,/*right*/283] //board size when game started
+	global.turn_boardsize = [/*up*/65,/*down*/65,/*left*/65,/*right*/65] //board size every turn if not set
 	//check "world" object for other settings
 }

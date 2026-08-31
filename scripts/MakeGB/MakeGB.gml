@@ -1,40 +1,82 @@
-///@Desc Creates a gaster blaster.
-function MakeGB(x, y, x_target, y_target, angle_start, angle_target, scale_x, scale_y, type, pause=25, duration=35, time_move=25) {
-    var bb = instance_create_depth(x, y, DEPTH_BATTLE.BULLET_OUTSIDE_HIGH, battle_bullet_gb);    
-    bb.x_target = x_target;
-    bb.y_target = y_target;
-    bb.angle_start = angle_start;
-    bb.angle_target = angle_target;
-    bb.scale_x = scale_x;
-    bb.scale_y = scale_y;
-    bb.type = type;
-    bb.time_release_delay = pause;
-    bb.time_beam_end_delay = duration;
-    bb.time_move = time_move;
-    return bb;
+///@func MakeGB(x0, y0, angle0, xscale, yscale, x1, y1, angle1, delay, blast, duration, [type], [sprite], [sound_charge], [sound_blast])
+///@desc Create a (gaster) blaster.
+///@param {Real}				x0					The x coordinate the blaster will be created at.
+///@param {Real}				y0					The y coordinate the blaster will be created at.
+///@param {Real}				angle0				The initial angle of the blaster.
+///@param {Real}				xscale				The horizontal scaling of the blaster, as a multiplier.
+///@param {Real}				yscale				The vertical scaling of the blaster, as a multiplier.
+///@param {Real}				x1					The x coordinate the blaster will move toward to.
+///@param {Real}				y1					The y coordinate the blaster will move toward to.
+///@param {Real}				angle1				The angle which the blaster will rotate to.
+///@param {Real}				[delay]				The delay duration before the blaster blast. (Default: 16)
+///@param {Real}				[blast]				The duration the blast stay. (Default: 10)
+///@param {Real}				[duration]			The duration it take to move from x/y/angle0 to x/y/angle1. (Default: 30)
+///@param {Real}				[type]				The type (color) of the blaster (between 0 and 2 which is white, blue and orange respectively). (Default: 0)
+///@param {Asset.GMSprite}		[sprite]				The sprite of the blaster.
+///@param {Bool}				[sound_charge]		Whenever there will be the charging sound of the blaster. (Default: true)
+///@param {Bool}				[sound_blast]		Whenever there will be the blasting sound of the blaster. (Default: true)
+///@return {Id.Instance<obj_battle_bullet_gb>}
+function MakeGB(_x0, _y0, _angle0, _xscale, _yscale, _x1, _y1, _angle1, _delay = 16, _blast = 10, _duration = 30, _type = 0, _sprite=spr_gb, _snd_charge = true, _snd_blast = true) 
+{	
+	var _depth = DEPTH_BATTLE.BULLET_OUTSIDE_HIGH;
+	
+	var _gb = instance_create_depth(0, 0, _depth, obj_battle_bullet_gb);
+	var _blaster = _gb.blaster;
+	with (_blaster)
+	{
+		sprite_index = _sprite;
+		x = _x0;
+		y = _y0;
+		image_angle = _angle0;
+		image_xscale = _xscale;
+		image_yscale = _yscale;
+	}
+	with (_gb)
+	{
+		depth = _depth;
+		
+		target_x = _x1;
+		target_y = _y1;
+		target_angle = _angle1;
+		
+		time_delay = _delay;
+		time_blast = _blast;
+		time_move = _duration;
+		
+		type = _type;
+		
+		charge_sound = _snd_charge;
+		blast_sound = _snd_blast;
+	}
+	return _gb;
 }
-///@desc Makes GB round.
-function MakeGBRound(x, y, radius, type){
-	for (var i = 0; i < 360; i += 45)
-    {
-        var sx = x + lengthdir_x(radius, i);
-        var sy = y + lengthdir_y(radius, i);
-        var xx = x + lengthdir_x(radius, i);
-        var yy = y + lengthdir_y(radius, i);
-        MakeGB(sx, sy, xx, yy, i - 105, i - 105, 1, 1, type, 2, 30, 0);
-    }
-}
-///@desc Makes a circle of Blasters around position with your params.
-function MakeGBCircle(x, y, startdir, delay, one_duration, minusdelay, plusdir, radius, type, scale, endtime){
-	var gb = instance_create_depth(x, y, 0,battle_bullet_gbcircle)
-	gb.startdir = startdir
-	gb.delay = delay
-	gb.one_duration = one_duration
-	gb.minusdelay = minusdelay
-	gb.plusdir = plusdir
-	gb.radius = radius
-	gb.type = type
-	gb.scale = scale
-	gb.endtime = endtime
-	return gb
+
+///@func MakeGBCircle()
+///@desc Create a (gaster) blaster in a circular manner.
+///@param {Real}				x					The x coordinate of the circle's center.
+///@param {Real}				y					The y coordinate of the circle's center.
+///@param {Real}				len_start			The initial distance away from the center.
+///@param {Real}				len_end				The target distance away from the center which the blaster will move toward to.
+///@param {Real}				dir					The rotation direction (either -1 or 1).
+///@param {Real}				angle				The angle in the circle of the blaster.
+///@param {Real}				xscale				The horizontal scaling of the blaster, as a multiplier.
+///@param {Real}				yscale				The vertical scaling of the blaster, as a multiplier.
+///@param {Real}				[delay]				The delay duration before the blaster blast. (Default: 16)
+///@param {Real}				[blast]				The duration the blast stay. (Default: 10)
+///@param {Real}				[duration]			The duration it take to move from x/y/angle0 to x/y/angle1. (Default: 30)
+///@param {Real}				[type]				The type (color) of the blaster (between 0 and 2 which is white, blue and orange respectively). (Default: 0)
+///@param {Asset.GMSprite}		[sprite]				The sprite of the blaster.
+///@param {Bool}				[sound_charge]		Whenever there will be the charging sound of the blaster. (Default: true)
+///@param {Bool}				[sound_blast]		Whenever there will be the blasting sound of the blaster. (Default: true)
+///@return {Id.Instance<obj_battle_bullet_gb>}
+function MakeGBCircle(_len_x, _len_y, _len0, _len1, _rot, _angle, _xscale, _yscale, _delay = 16, _blast = 10, _duration = 30, _type = 0, _sprite=spr_gb, _snd_charge = true, _snd_blast = true) 
+{
+	var _x0 = (_len_x + lengthdir_x(_len0, _angle)),
+		_y0 = (_len_y + lengthdir_y(_len0, _angle)),
+		_x1 = (_len_x + lengthdir_x(_len1, _angle)),
+		_y1 = (_len_y + lengthdir_y(_len1, _angle)),
+		_angle0 = point_direction(_x0, _y0, _x1, _y1) - (270 * _rot),
+		_angle1 = point_direction(_x0, _y0, _x1, _y1),
+		_gb = MakeGB(_x0, _y0, _angle0, _xscale, _yscale, _x1, _y1, _angle1, _delay, _blast, _duration, _type, _sprite, _snd_charge, _snd_blast);
+	return _gb;
 }

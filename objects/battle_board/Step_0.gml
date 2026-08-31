@@ -1,4 +1,4 @@
-if (!instance_exists(mainboard)) mainboard = Battle_CreateBoardRect(x, y, 65, 65, 283, 283);
+if (!instance_exists(mainboard)) mainboard = Battle_CreateBoardRect(x, y, global.start_boardsize[0], global.start_boardsize[1], global.start_boardsize[2], global.start_boardsize[3]);
 mainboard.x = x;
 mainboard.y = y;
 mainboard.angle = angle;

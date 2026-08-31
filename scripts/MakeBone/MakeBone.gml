@@ -12,7 +12,7 @@ function MakeBone(X, Y, LENGTH, HSPEED=0, VSPEED=0, TYPE=0, OUT=0, ANGLE=DIR.UP,
 	bone.paps = PAPS;
     bone.angle = ANGLE;
     bone._angle = ANGLE;
-    bone.duration = DURATION;
+    bone.alarm[0] = DURATION;
     bone.follow = OBJ;
     bone.follow_board = FOLLOW_BOARD;
     if (OBJ) {
@@ -342,7 +342,7 @@ function MakeBonesWaveUpDown(Strength, Y, Type, is_paps=0){
         b[1] = MakeBone(320 + (cnm * 12), Y, 0, 0, 0, Type, 0, 90, 0, 0, is_paps, 90);
         Anim_Create(b[1], "length", 2, 1, 0, Strength, 25, 2 + (cnm * 2));
         Anim_Create(b[1], "length", 2, 0, Strength, -Strength, 25, 27 + (cnm * 2));
-        b[2] = MakeBone(320 - (cnm * 12), Y, 0, 0, 0, 0, 0, 90, 0, 0, is_paps, 90);
+        b[2] = MakeBone(320 - (cnm * 12), Y, 0, 0, 0, Type, 0, 90, 0, 0, is_paps, 90);
         Anim_Create(b[2], "length", 2, 1, 0, Strength, 25, 2 + (cnm * 2));
         Anim_Create(b[2], "length", 2, 0, Strength, -Strength, 25, 27 + (cnm * 2));
         cnm += 1;
@@ -356,7 +356,7 @@ function MakeBonesWaveLeftRight(Strength, X, Type, is_paps=0){
         b[1] = MakeBone(X, 320 + (cnm * 12), 0, 0, 0, Type, 0, 0, 0, 0, is_paps, 90);
         Anim_Create(b[1], "length", 2, 1, 0, Strength, 25, 2 + (cnm * 2));
         Anim_Create(b[1], "length", 2, 0, Strength, -Strength, 25, 27 + (cnm * 2));
-        b[2] = MakeBone(X, 320 - (cnm * 12), 0, 0, 0, 0, 0, 0, 0, 0, is_paps, 90);
+        b[2] = MakeBone(X, 320 - (cnm * 12), 0, 0, 0, Type, 0, 0, 0, 0, is_paps, 90);
         Anim_Create(b[2], "length", 2, 1, 0, Strength, 25, 2 + (cnm * 2));
         Anim_Create(b[2], "length", 2, 0, Strength, -Strength, 25, 27 + (cnm * 2));
         cnm += 1;
